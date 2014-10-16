@@ -2,171 +2,129 @@
 <html>
   <head>
     <title>Steven Dao</title>
-    <link href="cv.css" rel="stylesheet" type="text/css" title="CV">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+    <link href="potato.css" rel="stylesheet" type="text/css" title="CV">
     <meta charset="utf-8">
     <meta name="description" content="Computer science and philosophy student at the University of Texas at Austin. Computer graphics and animation enthusiast. Former intern at Google and DreamWorks Animation.">
   </head>
+
   <body>
-    <div id="main">
-      <div id="green">
-        <h1>Steven Dao</h1>
-        <div class="content">
-          <ul class="address">
-            <li>(832) 582-0950</a></li>
+    <div id="flexbox">
+      <header>
+        <h1><a href="http://sdao.me">Steven Dao</a></h1>
+        <p>
+          <ul>
+            <li>(832) 582-0950</li>
             <li><a href="mailto:stevendao@utexas.edu">stevendao@utexas.edu</a></li>
-            <li><a href="dao_resume.pdf">Résumé (PDF)</a></li>
-            <!-- <li><a href="http://vimeo.com/85896521">Demo Reel</a></li> -->
-            <li><a href="http://github.com/sdao">GitHub</a></li>
-            <li class="last"><a href="http://vimeo.com/stevedao">Vimeo</a></li>
+            <li><a href="dao_resume.pdf">R&eacute;sum&eacute;</a> (PDF file)</li>
+            <li><a href="http://github.com/sdao">GitHub</a> &bull; <a href="http://vimeo.com/stevedao">Vimeo</a> &bull; <a href="http://www.linkedin.com/in/shdao/en">LinkedIn</a>
           </ul>
-        </div>
-      </div>
-
-      <div id="intro" class="section">
-        <h3>About Me</h2>
-        <p class="content">
-          Computer science and philosophy student at UT&ndash;Austin.
         </p>
-        <p class="content">
-          Computer graphics and animation enthusiast.
+        <p>
+          I'm a student of computer science and philosophy at the University of Texas at Austin. My interests are in computer graphics and animation, especially in physical effects simulation.
         </p>
-        <p class="content">
-          Former intern at <a href="http://www.google.com/about/locations/boston/">Google</a>
-          and <a href="http://www.dreamworksanimation.com/">DreamWorks Animation</a>.
+        <p>
+          In the past, I've interned with <a href="http://www.google.com/about/locations/boston/">Google</a> in Cambridge, MA,
+          and with <a href="http://www.dreamworksanimation.com/">DreamWorks Animation</a> in Glendale, CA.
+        </p>
+      </header>
+      <div>
+        <h1>Water Simulation Plugins</h1>
+        <p>
+          Open-source Maya C++ plugin <a href="https://github.com/sdao/TessendorfOceanMaya">(view on GitHub)</a>
+          and 3ds Max C++ plugin <a href="https://github.com/sdao/iWaveOcean">(view on GitHub)</a>.
+        </p>
+        <iframe src="//player.vimeo.com/video/83008229?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>
+          <p>Water drop demo simulated with the plugin <a href="http://vimeo.com/83008229">(play on Vimeo)</a>.</p>
         </p>
       </div>
-
-      <div id="orange" class="section">
-        <h2>Water Simulation Plugin</h2>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">Maya plugin (C++)</span>
-            <span>&nbsp;<a href="https://github.com/sdao/TessendorfOceanMaya">View on GitHub</a></span>
-          </p>
-          <p>
-            <span class="accent-heavy">3ds Max modifier (C++)</span>
-            <span>&nbsp;<a href="https://github.com/sdao/iWaveOcean">View on GitHub</a></span>
-          </p>
+      <div class="continue tiny notitle">
+        <p>
+          Based on <a href="http://people.clemson.edu/~jtessen/reports.html">Jerry Tessendorf's ocean simulation course notes</a> from Siggraph 2004.
+          Both the Maya and 3ds Max plugins support generating ambient waves on an open ocean.
+        </p>
+        <p>
+          At the heart of the process, they use an FFT to sum many individual waves constructed from a statistical model.
+          The 3ds Max version also supports dynamic interaction with collision objects using a convolution kernel over a grid of wave points (Tessendorf's &ldquo;iWave&rdquo; method).
+        </p>
+        <h2>More video demos</h2>
+        <p>
           <ul>
-            <li>Based on Jerry Tessendorf's ocean simulation course notes from Siggraph 2004</li>
-            <li>Both the Maya and 3ds Max plugins support generating ambient waves on an open ocean; at the heart of the process, they use an FFT to sum many individual waves constructed from a statistical model</li>
-            <li>The 3ds Max version also supports dynamic interaction with collision objects using a convolution kernel over a grid of wave points (Tessendorf's &ldquo;iWave&rdquo; method)</li>
+            <li>You can use the plugin to <a href="http://vimeo.com/83149191">draw shapes such as hearts in the water</a>
+            <li>Check out the range of <a href="http://vimeo.com/104273062">range of controls available to artists</a> for customizing waves and water dynamics
           </ul>
-          <div class="videos">
-            <p>These videos demonstrate the 3ds Max version, with wave and collision object interaction:</p>
-            <iframe src="//player.vimeo.com/video/83008229?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/83008229">Ocean Simulation - Droplet</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-            <iframe src="//player.vimeo.com/video/83149191?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/83149191">Shapes in the Water</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-          </div>
-          <div class="videos">
-            <p>And this demo shows some of the artist-controllable parameters in the 3ds Max plugin:</p>
-            <iframe src="//player.vimeo.com/video/104273062?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/104273062">iWave 3ds Max Controls Demo</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-          </div>
-        </div>
+        </p>
       </div>
-
-      <div id="blue" class="section">
-        <h2>Terrain Generation Plugin</h2>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">3ds Max modifier (C++)</span>
-            <span>&nbsp;<a href="https://github.com/sdao/DiamondSquare">View on GitHub</a></span>
-          </p>
-          <ul>
-            <li>A procedural terrain generator using the diamond-square algorithm</li>
-            <li>Can generate terrain of varying roughness, from deserts to mountains</li>
-          </ul>
-          <div class="videos">
-            <p>The terrain outside the window in this video is entirely procedural:</p>
-            <iframe src="//player.vimeo.com/video/84369191?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/84369191">Paper Airplane - By the Window</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-          </div>
-        </div>
+      <div class="odd">
+        <h1>Terrain Generation Plugin</h1>
+        <p>
+          3ds Max modifier <a href="https://github.com/sdao/DiamondSquare">(view on GitHub)</a>.
+        </p>
+        <iframe src="//player.vimeo.com/video/84369191?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>Terrain outside the window is completely procedurally generated <a href="http://vimeo.com/84369191">(play on Vimeo)</a>.
+        <p>
+          This plugin implements the diamond-square algorithm.
+          It generates terrain of varying roughness, from deserts to mountains.
+        </p>
       </div>
-
-      <div id="purple" class="section">
-        <h2>Real-Time OpenGL Simulations </h2>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">Basic mass-spring cloth simulator (Scala/OpenGL)</span>
-            <span>&nbsp;<a href="https://github.com/sdao/verlet-cloth">View on GitHub</a></span>
-          </p>
-          <ul>
-            <li>A simple mass-spring cloth simulation system using Verlet integration</li>
-            <li>Currently supports cloth collision with a sphere</li>
-          </ul>
-          <div class="videos">
-            <p>Sample screen grab of the simulation in action:</p>
-            <img src="images/gl-cloth.png" alt="Cloth touching a sphere." width="400" />
-            <p>
-              <a href="images/gl-cloth.png" target="_blank">See full image</a>
-              <a href="https://vimeo.com/77792276">See animated video</a>
-            </p>
-          </div>
-        </div>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">Fur/grass simulation (C++/OpenGL)</span>
-            <span>&nbsp;<a href="https://github.com/sdao/fur-demo">View on GitHub</a></span>
-          </p>
-          <ul>
-            <li>Fur simulation using a "shell" shader approach, based off <a href="http://www.catalinzima.com/xna/tutorials/fur-rendering/">Catalin Zima</a>'s XNA tutorial</li>
-            <li>Reimplemented in OpenGL 3.3 Core with GLSL shaders</li>
-            <li>Also works well for fur-like objects like grass</li>
-          </ul>
-          <div class="videos">
-            <p>Sample screen grab of the simulation in action:</p>
-            <img src="images/gl-fur-grass.png" alt="Grass using fur simulation." width="400" />
-            <p>
-              <a href="images/gl-fur-grass.png" target="_blank">See full image</a>
-              <a href="https://vimeo.com/91224543">See animated video</a>
-            </p>
-          </div>
-        </div>
+      <div>
+        <h1>Real-Time OpenGL Sims</h1>
+        <h2>Basic mass-spring cloth simulator</h2>
+        <p>Implemented in Scala using OpenGL via the Java OpenGL libraries <a href="https://github.com/sdao/verlet-cloth">(view on GitHub)</a>. Simulates a simple mass-spring cloth system using Verlet integration. It currently supports cloth collision with a sphere collider.</p>
+        <p>
+          <img src="images/gl-cloth.png" alt="Cloth touching a sphere." width="300">
+        </p>
+        <p>
+          Screenshot of the simulation running in realtime <a href="https://vimeo.com/77792276">(video on Vimeo)</a>.
+        </p>
       </div>
-
-      <div id="red" class="section">
-        <h2>Houdini Sims</h2>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">Rube Goldberg machine</span>
-            <span>&nbsp;<a href="https://vimeo.com/104258383">View on Vimeo</a></span>
-          </p>
-          <div class="videos">
-            <iframe src="//player.vimeo.com/video/104258383?byline=0&amp;portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/104258383">Rube Goldberg Machine in Houdini</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p> <p>A Rube Goldberg machine in Houdini using rigid bodies, wires, and FLIP fluids. 100% simulated; no keyframes (except for the motion of the camera). Houdini Apprentice / rendered in Mantra.</p>
-          </div>
-        </div>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">Heartcloud</span>
-            <span>&nbsp;<a href="https://vimeo.com/105207973">View on Vimeo</a></span>
-          </p>
-          <div class="videos">
-            <iframe src="//player.vimeo.com/video/105207973?byline=0&amp;portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/105207973">Heartcloud</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p> <p>A simple animation of a cloud creating a heart shape. Uses volumetric cloud simulation in Houdini, with blendshapes (morph targets) driving the heart animation. Houdini Apprentice / rendered in Mantra.</p>
-          </div>
-        </div>
+      <div class="continue tiny notitle">
+        <h2>Fur/grass simulation in shaders</h2>
+        <p>
+          Implemented in C++ using OpenGL shaders <a href="https://github.com/sdao/fur-demo">(view on GitHub)</a>.
+          Uses a &ldquo;shell&rdquo; shader method, based off of <a href="http://www.catalinzima.com/xna/tutorials/fur-rendering/">Catalin Zima's article for the XNA game engine</a>.
+          The method was reimplemented in OpenGL 3.3 Core with GLSL shaders, and it also works well for fur-like objects such as grass.
+        </p>
+        <p>
+          <img src="images/gl-fur-grass.png" alt="Grass using fur simulation." width="300">
+        </p>
+        <p>
+          Screenshot of the simulation running in realtime <a href="https://vimeo.com/91224543">(video on Vimeo)</a>.
+        </p>
       </div>
-
-      <div id="black" class="section">
-        <h2>Reyes Rasterizer</h2>
-        <div class="content">
-          <p>
-            <span class="accent-heavy">&ldquo;Hugo Reyes&rdquo;, a micropolygon renderer (Scala)</span>
-            <span>&nbsp;<a href="https://github.com/sdao/hugo-reyes">View on GitHub</a></span>
-          </p>
-          <ul>
-            <li>A micropolygon renderer that roughly follows the Reyes algorithm by splitting and dicing primitives into micropolygons before shading</li>
-            <li>After the splitting step, the rest of the pipeline is parallelized thanks to Scala's parallel collections</li>
-            <li>Supports B&eacute;zier patches, displacement mapping, lighting with attenuation and shadow maps, toon shading, and more</li>
-            <li>Most parameters are fully-animatable (although it currently only supports linear interpolation of parameters)</li>
-          </ul>
-          <div class="videos">
-            <p>Sample rendered video using toon shading and shadow mapping:</p>
-            <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/88600315">Reyes Renderer Sample</a> from <a href="http://vimeo.com/stevedao">Steve Dao</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-          </div>
-        </div>
+      <div class="odd short">
+        <h1>Houdini Sims</h1>
+        <h2>Rube Goldberg machine</h2>
+        <iframe src="//player.vimeo.com/video/104258383?byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>A Rube Goldberg machine in Houdini using rigid bodies, wires, and FLIP fluids. 100% simulated; no keyframes (except for the motion of the camera). Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/104258383">(play on Vimeo)</a>.</p>
       </div>
-
-      <div id="footer" class="section">
-        This page was last updated on 20 August 2014.
+      <div class="continue odd short">
+        <h1>&nbsp;</h1>
+        <h2>Heartcloud</h2>
+        <iframe src="//player.vimeo.com/video/105207973?byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>A simple animation of a cloud creating a heart shape. Uses volumetric cloud simulation in Houdini, with blendshapes (morph targets) driving the heart animation. Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/105207973">(play on Vimeo)</a>.</p>
+      </div>
+      <div>
+        <h1>Reyes Rasterizer</h1>
+        <p>A micropolygon renderer written in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>.</p>
+        <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>Sample rendered video using toon shading and shadow mapping <a href="http://vimeo.com/88600315">(play on Vimeo)</a>.</p>
+      </div>
+      <div class="continue tiny notitle">
+        <p>
+          A micropolygon renderer that roughly follows the Reyes algorithm by splitting and dicing primitives into micropolygons before shading.
+          After the splitting step, the rest of the pipeline is parallelized thanks to Scala's parallel collections.
+        </p>
+        <p>
+          It supports Bézier patches, displacement mapping, lighting with attenuation and shadow maps, toon shading, and more.
+          Most parameters are fully-animatable (although it currently only supports linear interpolation of parameters).
+        </p>
+      </div>
+      <div class="odd tiny notitle">
+        <p>
+          Thanks for visiting! I last updated my homepage on 16 October 2014.
+        </p>
       </div>
     </div>
   </body>
