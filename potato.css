@@ -115,3 +115,7 @@ dd {
 dl {
   margin: 0;
 }
+
+.dummy {
+  visibility: hidden;
+}
