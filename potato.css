@@ -24,7 +24,7 @@ html, body {
 
   /* As a flexbox item of #outer. */
   -webkit-flex: 1 0 auto;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 
   /* As a flexbox container. */
   display: -webkit-flex;
