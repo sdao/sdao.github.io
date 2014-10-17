@@ -6,10 +6,27 @@ html, body {
   color: #222;
 }
 
+#outer {
+  height: 100%;
+
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
 #flexbox {
-  min-height: 100%;
   margin: 0;
 
+  /* As a flexbox item of #outer. */
+  -webkit-flex: 1 0 auto;
+  flex: 1 1 auto;
+
+  /* As a flexbox container. */
   display: -webkit-flex;
   display: flex;
 
