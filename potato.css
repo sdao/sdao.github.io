@@ -132,3 +132,12 @@ h2 {
 .dummy {
   visibility: hidden;
 }
+
+::-moz-selection {
+  color: #222;
+  background: #4ecd3a;
+}
+::selection {
+  color: #222;
+  background: #4ecd3a;
+}
