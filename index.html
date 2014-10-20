@@ -3,7 +3,32 @@ layout: portfolio
 title: Steven Dao
 ---
 
-<div>
+<div class="short">
+  <h1>Colorless</h1>
+  <p>
+    A 2D puzzle-platformer in production by Team Potato Lab (Aaron Villalpando, Cindy To, Katie Park, Ronald Yam, and yours truly) for UT's 2D Game Development Capstone.
+    Currently a work-in-progress; more information to come once our game approaches a playable state!
+  </p>
+  <p>
+    <img src="images/colorless_char_idle.gif" alt="Character idle animation from Colorless." width="200">
+    <img src="images/colorless_rock_explode.gif" alt="Rock explosion animation from Colorless." width="200">
+  </p>
+  <p>
+    Ronald Yam and I created most of the animations for the game.
+    I rigged the character while he animated it.
+    Cindy To created the base artwork for the rock explosion animation above (as well as for countlesss others).
+  </p>
+</div>
+<div class="continue tiny notitle">
+  <h2>Cloth looping</h2>
+  <p>
+    <img src="images/maya_loop_cache_gui.png" alt="MEL script and GUI for looping Maya nCloth." width="350">
+  </p>
+  <p>
+    To get our character's cloth animation to seamlessly loop, we created a MEL script for Maya that creates loops from segments of nCloth simulation <a href="https://github.com/sdao/mayatools/tree/master/LoopNCache">(view on GitHub)</a>.
+  </p>
+</div>
+<div class="odd">
   <h1>Water Simulation Plugins</h1>
   <p>
     Open-source Maya C++ plugin <a href="https://github.com/sdao/TessendorfOceanMaya">(view on GitHub)</a>
@@ -14,7 +39,7 @@ title: Steven Dao
     Water drop demo simulated with the plugin <a href="http://vimeo.com/83008229">(play on Vimeo)</a>.
   </p>
 </div>
-<div class="continue tiny notitle">
+<div class="odd continue tiny notitle">
   <p>
     Based on <a href="http://people.clemson.edu/~jtessen/reports.html">Jerry Tessendorf's ocean simulation course notes</a> from Siggraph 2004.
     Both the Maya and 3ds Max plugins support generating ambient waves on an open ocean.
@@ -29,7 +54,7 @@ title: Steven Dao
     <li>Check out the range of <a href="http://vimeo.com/104273062">range of controls available to artists</a> for customizing waves and water dynamics</li>
   </ul>
 </div>
-<div class="odd">
+<div class="">
   <h1>Terrain Generation Plugin</h1>
   <p>
     3ds Max modifier <a href="https://github.com/sdao/DiamondSquare">(view on GitHub)</a>.
@@ -41,7 +66,7 @@ title: Steven Dao
     It generates terrain of varying roughness, from deserts to mountains.
   </p>
 </div>
-<div>
+<div class="odd">
   <h1>Real-Time OpenGL Sims</h1>
   <h2>Basic mass-spring cloth simulator</h2>
   <p>Implemented in Scala using OpenGL via the Java OpenGL libraries <a href="https://github.com/sdao/verlet-cloth">(view on GitHub)</a>. Simulates a simple mass-spring cloth system using Verlet integration. It supports cloth collision with a sphere.</p>
@@ -52,7 +77,7 @@ title: Steven Dao
     Screenshot of the simulation running in realtime <a href="https://vimeo.com/77792276">(video on Vimeo)</a>.
   </p>
 </div>
-<div class="continue tiny notitle">
+<div class="odd continue tiny notitle">
   <h2>Fur/grass simulation in shaders</h2>
   <p>
     Implemented in C++ using OpenGL shaders <a href="https://github.com/sdao/fur-demo">(view on GitHub)</a>.
@@ -66,24 +91,24 @@ title: Steven Dao
     Screenshot <a href="https://vimeo.com/91224543">(video on Vimeo)</a>.
   </p>
 </div>
-<div class="odd short">
+<div class="short">
   <h1>Houdini Sims</h1>
   <h2>Rube Goldberg machine</h2>
   <iframe src="//player.vimeo.com/video/104258383?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <p>A Rube Goldberg machine in Houdini using rigid bodies, wires, and FLIP fluids. 100% simulated; no keyframes (except for the motion of the camera). Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/104258383">(play on Vimeo)</a>.</p>
 </div>
-<div class="continue odd short titlespace">
+<div class="continue short titlespace">
   <h2>Heartcloud</h2>
   <iframe src="//player.vimeo.com/video/105207973?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <p>A simple animation of a cloud creating a heart shape. Uses volumetric cloud simulation in Houdini, with blendshapes (morph targets) driving the heart animation. Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/105207973">(play on Vimeo)</a>.</p>
 </div>
-<div>
+<div class="odd">
   <h1>Reyes Rasterizer</h1>
   <p>A micropolygon renderer written in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>.</p>
   <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <p>Sample rendered video using toon shading and shadow mapping <a href="http://vimeo.com/88600315">(play on Vimeo)</a>.</p>
 </div>
-<div class="continue tiny notitle">
+<div class="odd continue tiny notitle">
   <p>
     A micropolygon renderer that roughly follows the Reyes algorithm by splitting and dicing primitives into micropolygons before shading.
     After the splitting step, the rest of the pipeline is parallelized thanks to Scala's parallel collections.
@@ -93,8 +118,8 @@ title: Steven Dao
     Most parameters are fully-animatable (although it currently only supports linear interpolation of parameters).
   </p>
 </div>
-<div class="odd tiny notitle">
+<div class="tiny notitle">
   <p>
-    Thanks for visiting! I last updated my homepage on 17 October 2014.
+    Thanks for visiting! I last updated my homepage on 20 October 2014.
   </p>
 </div>
