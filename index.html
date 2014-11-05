@@ -102,13 +102,27 @@ title: Steven Dao
   <iframe src="//player.vimeo.com/video/105207973?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <p>A simple animation of a cloud creating a heart shape. Uses volumetric cloud simulation in Houdini, with blendshapes (morph targets) driving the heart animation. Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/105207973">(play on Vimeo)</a>.</p>
 </div>
-<div class="odd">
+<div class="odd tiny">
+  <h1>MotionBuilder + Windows Phone</h1>
+  <p>This Windows Phone app <a href="https://github.com/sdao/mb-device-tcp-phone">(view on GitHub)</a> simply transmits your phone's current orientation in 3D space.</p>
+  <p>
+  <img src="images/mobu_phone.png" alt="MotionBuilder with the custom plugin loaded." width="200">
+  </p>
+</div>
+<div class="odd continue short notitle">
+  <p>The matching TCP server and MotionBuilder plugin <a href="https://github.com/sdao/mb-device-tcp">(view both together on GitHub)</a> run on a local computer to receive the phone's orientation, letting you control objects in MotionBuilder by physically rotating your phone.</p>
+  <p>The TCP server runs on the same computer as MotionBuilder and simply relays orientation data from the phone to the MotionBuilder plugin. (This made testing easier!)</p>
+  <p>
+    <img src="images/mobu_scene.png" alt="MotionBuilder with the custom plugin loaded." width="360">
+  </p>
+</div>
+<div class="">
   <h1>Reyes Rasterizer</h1>
   <p>A micropolygon renderer written in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>.</p>
   <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <p>Sample rendered video using toon shading and shadow mapping <a href="http://vimeo.com/88600315">(play on Vimeo)</a>.</p>
 </div>
-<div class="odd continue tiny notitle">
+<div class="continue tiny notitle">
   <p>
     A micropolygon renderer that roughly follows the Reyes algorithm by splitting and dicing primitives into micropolygons before shading.
     After the splitting step, the rest of the pipeline is parallelized thanks to Scala's parallel collections.
@@ -118,8 +132,8 @@ title: Steven Dao
     Most parameters are fully-animatable (although it currently only supports linear interpolation of parameters).
   </p>
 </div>
-<div class="tiny notitle">
+<div class="odd tiny notitle">
   <p>
-    Thanks for visiting! I last updated my homepage on 20 October 2014.
+    Thanks for visiting! I last updated my homepage on 4 November 2014.
   </p>
 </div>
