@@ -125,19 +125,22 @@ title: Steven Dao
 </div>
 
 <div class="">
-  <h1>Reyes Rasterizer</h1>
-  <p>A micropolygon renderer written in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>.</p>
-  <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <p>Sample rendered video using toon shading and shadow mapping <a href="http://vimeo.com/88600315">(play on Vimeo)</a>.</p>
-</div>
-<div class="continue tiny notitle">
+  <h1>Renderers</h1>
+  <h2>Path Tracer</h2>
   <p>
-    A micropolygon renderer that roughly follows the Reyes algorithm by splitting and dicing primitives into micropolygons before shading.
-    After the splitting step, the rest of the pipeline is parallelized thanks to Scala's parallel collections.
+    <img src="images/path_tracer_1200.png" alt="Cornell box and Stanford dragon, 1200 iterations." width="450">
   </p>
   <p>
-    It supports Bézier patches, displacement mapping, lighting with attenuation and shadow maps, toon shading, and more.
-    Most parameters are fully-animatable (although it currently only supports linear interpolation of parameters).
+    A Monte Carlo global illumination path tracer written in C++ <a href="https://github.com/sdao/path-tracer">(view on GitHub)</a>. It renders physically-accurate diffuse, specular, and refractive surfaces.
+    The above image of a modified Cornell box with the Stanford dragon model took 1 hour to render 1000 iterations.
+  </p>
+</div>
+<div class="continue titlespace">
+  <h2>Reyes Renderer</h2>
+  <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>
+    A parallelized micropolygon renderer written in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>. It uses the Reyes algorithm popularized by Pixar's RenderMan.
+    My implementation supports Bézier patches, displacement mapping, shadow-mapped lighting, toon shading, and animation.
   </p>
 </div>
 <div class="odd tiny notitle">
