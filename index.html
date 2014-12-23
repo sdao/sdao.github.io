@@ -67,8 +67,8 @@ title: Steven Dao
     3ds Max modifier <a href="https://github.com/sdao/DiamondSquare">(view on GitHub)</a> and Houdini SOP <a href="https://github.com/sdao/houdini-diamondsquare">(view on GitHub)</a>.
   </p>
   <iframe src="//player.vimeo.com/video/84369191?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <p>The terrain outside the window is completely procedurally generated in 3ds Max <a href="http://vimeo.com/84369191">(play on Vimeo)</a>.
   <p>
+    The terrain outside the window is completely procedurally generated in 3ds Max <a href="http://vimeo.com/84369191">(play on Vimeo)</a>.
     These plugins implement the <a href="http://en.wikipedia.org/wiki/Diamond-square_algorithm">diamond-square algorithm</a>.
     It generates terrain of varying roughness, from deserts to mountains.
   </p>
@@ -84,21 +84,40 @@ title: Steven Dao
   <iframe src="//player.vimeo.com/video/105207973?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <p>A simple animation of a cloud creating a heart shape. Uses volumetric cloud simulation in Houdini, with blendshapes (morph targets) driving the heart animation. Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/105207973">(play on Vimeo)</a>.</p>
 </div>
-<div class="tiny">
+<div class="short">
+  <h1>Renderers</h1>
+  <h2>Global illumination path tracer</h2>
+  <p>
+    <img src="images/path_tracer_1200.png" alt="Cornell box and Stanford dragon, 1200 iterations." width="450">
+  </p>
+  <p>
+    A Monte Carlo global illumination path tracer in C++ <a href="https://github.com/sdao/path-tracer">(view on GitHub)</a>. It renders physically-accurate diffuse, specular, and refractive surfaces.
+    This Cornell box with a Stanford dragon took 1 hour to render 1000 iterations.
+  </p>
+</div>
+<div class="continue titlespace short">
+  <h2>Reyes renderer</h2>
+  <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>
+    A parallelized micropolygon renderer in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>.
+    Uses the Reyes algorithm popularized by Pixar's RenderMan. Supports Bézier patches, displacement mapping, shadow maps, toon shading, and animation.
+  </p>
+</div>
+<div class="odd tiny">
   <h1>MotionBuilder + Windows Phone</h1>
   <p>This Windows Phone app <a href="https://github.com/sdao/mb-device-tcp-phone">(view on GitHub)</a> transmits your phone's physical 3D orientation. Make a MoBu object mimic your phone's rotation in realtime!</p>
   <p>
-  <img src="images/mobu_phone.png" alt="MotionBuilder with the custom plugin loaded." width="200">
+    <img src="images/mobu_phone.png" alt="MotionBuilder with the custom plugin loaded." width="200">
   </p>
 </div>
-<div class="continue short notitle">
+<div class="odd continue short notitle">
   <p>The matching TCP server and MotionBuilder plugin <a href="https://github.com/sdao/mb-device-tcp">(view both together on GitHub)</a> run on a local computer to receive the phone's orientation, letting you control objects in MotionBuilder by physically rotating your phone.</p>
   <p>The TCP server runs on the same computer as MotionBuilder and simply relays orientation data from the phone to the MotionBuilder plugin. (This made testing easier!)</p>
   <p>
     <img src="images/mobu_scene.png" alt="MotionBuilder with the custom plugin loaded." width="360">
   </p>
 </div>
-<div class="odd">
+<div class="">
   <h1>Real-Time OpenGL Sims</h1>
   <h2>Basic mass-spring cloth simulator</h2>
   <p>Implemented in Scala using OpenGL via the Java OpenGL libraries <a href="https://github.com/sdao/verlet-cloth">(view on GitHub)</a>. Simulates a simple mass-spring cloth system using Verlet integration. It supports cloth collision with a sphere.</p>
@@ -109,7 +128,7 @@ title: Steven Dao
     Screenshot of the simulation running in realtime <a href="https://vimeo.com/77792276">(video on Vimeo)</a>.
   </p>
 </div>
-<div class="odd continue tiny notitle">
+<div class="continue tiny notitle">
   <h2>Fur/grass simulation in shaders</h2>
   <p>
     Implemented in C++ using OpenGL shaders <a href="https://github.com/sdao/fur-demo">(view on GitHub)</a>.
@@ -121,26 +140,6 @@ title: Steven Dao
   </p>
   <p>
     Screenshot <a href="https://vimeo.com/91224543">(video on Vimeo)</a>.
-  </p>
-</div>
-
-<div class="">
-  <h1>Renderers</h1>
-  <h2>Path Tracer</h2>
-  <p>
-    <img src="images/path_tracer_1200.png" alt="Cornell box and Stanford dragon, 1200 iterations." width="450">
-  </p>
-  <p>
-    A Monte Carlo global illumination path tracer written in C++ <a href="https://github.com/sdao/path-tracer">(view on GitHub)</a>. It renders physically-accurate diffuse, specular, and refractive surfaces.
-    The above image of a modified Cornell box with the Stanford dragon model took 1 hour to render 1000 iterations.
-  </p>
-</div>
-<div class="continue titlespace">
-  <h2>Reyes Renderer</h2>
-  <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <p>
-    A parallelized micropolygon renderer written in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>. It uses the Reyes algorithm popularized by Pixar's RenderMan.
-    My implementation supports Bézier patches, displacement mapping, shadow-mapped lighting, toon shading, and animation.
   </p>
 </div>
 <div class="odd tiny notitle">
