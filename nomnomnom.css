@@ -53,7 +53,7 @@ html, body {
   margin: 0.5em 0;
 }
 
-.titlespace:before {
+.titlespace:before, .subtitlespace:before {
   content: "\a0";
   visibility: hidden;
 }
@@ -98,14 +98,11 @@ header ul {
   margin-left: 0;
 }
 
-h2 {
+h2, .subtitlespace:before {
   font-size: 1.2em;
   font-weight: 700;
   color: #444;
-}
-
-.dummy {
-  visibility: hidden;
+  margin: 1em 0;
 }
 
 .tolkien p {
@@ -142,7 +139,7 @@ h2 {
     padding-top: 0;
   }
 
-  .titlespace:before {
+  .titlespace:before, .subtitlespace:before {
     /* No spacer when vertical. */
     display: none;
   }
@@ -186,7 +183,7 @@ h2 {
     width: 300px;
   }
 
-  .titlespace:before {
+  .titlespace:before, .subtitlespace:before {
     /* Need a spacer to align empty title when horizontal. */
     display: block;
   }
