@@ -104,6 +104,10 @@ h2 {
   color: #444;
 }
 
+.dummy {
+  visibility: hidden;
+}
+
 .tolkien p {
   margin: 0;
 }
