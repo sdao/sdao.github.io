@@ -47,13 +47,13 @@ html, body {
   color: #fff;
 }
 
-#flexbox > div h1, .titlespace:before {
+#flexbox > div h1, .h1-space:before {
   font-size: 2em;
   font-weight: 700;
   margin: 0.5em 0;
 }
 
-.titlespace:before, .subtitlespace:before {
+.h1-space:before, .h2-space:before {
   content: "\a0";
   visibility: hidden;
 }
@@ -98,7 +98,7 @@ header ul {
   margin-left: 0;
 }
 
-h2, .subtitlespace:before {
+h2, .h2-space:before {
   font-size: 1.2em;
   font-weight: 700;
   color: #444;
@@ -139,7 +139,7 @@ h2, .subtitlespace:before {
     padding-top: 0;
   }
 
-  .titlespace:before, .subtitlespace:before {
+  .h1-space:before, .h2-space:before {
     /* No spacer when vertical. */
     display: none;
   }
@@ -183,7 +183,7 @@ h2, .subtitlespace:before {
     width: 300px;
   }
 
-  .titlespace:before, .subtitlespace:before {
+  .h1-space:before, .h2-space:before {
     /* Need a spacer to align empty title when horizontal. */
     display: block;
   }
