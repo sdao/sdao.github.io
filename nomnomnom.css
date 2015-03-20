@@ -109,6 +109,59 @@ h2, .h2-space:before {
   margin: 0;
 }
 
+#render-demo {
+  display: inline-block;
+  position: relative;
+  width: 450px;
+  height: 337px;
+}
+
+#render-demo-static {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#render-demo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  visibility: hidden;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#render-demo-overlay div {
+  margin: 1em;
+}
+
+#render-demo-overlay:hover {
+  opacity: 1;
+}
+
+#render-demo-pnacl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#render-demo-stats {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  padding: 0.5em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
 ::-moz-selection {
   color: #222;
   background: #4ecd3a;

@@ -96,9 +96,17 @@ title: Steven Dao
   </p>
 </div>
 <div class="continue h1-space short">
-  <p class="h2-space">
-    <img src="images/pathtracer_spheres_800iters_20min.png" alt="Row of spheres, demonstrating depth of field." width="450">
-  </p>
+  <p class="h2-space"></p>
+  <div id="render-demo">
+    <img id="render-demo-static" src="images/pathtracer_spheres_800iters_20min.png" alt="Row of spheres, demonstrating depth of field." width="450">
+    <div id="render-demo-overlay">
+      <div id="render-demo-overlay-text">
+        <p>Click to try the Portable Native Client (PNaCl) version of the path tracer in your web browser.</p>
+      </div>
+    </div>
+    <div id="render-demo-pnacl"></div>
+    <div id="render-demo-stats"></div>
+  </div>
   <p>
     This row of spheres demonstrates rendering with depth of field (the aperture being <em>&#131;</em>/16 in this image). The rendering was stopped after about 20 minutes and 800 iterations. (Timings recorded on a 2.3 GHz Intel Core i5.)
   </p>
