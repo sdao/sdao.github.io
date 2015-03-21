@@ -1,3 +1,5 @@
+var startTime = new Date(0);
+
 function loadDemo() {
   var staticOverlay = $('#render-demo-static');
   var demoOverlay = $('#render-demo-overlay');
@@ -17,21 +19,21 @@ function loadDemo() {
     src: 'path-tracer.nmf',
     type: 'application/x-pnacl'
   }).bind('message', handleMessage).appendTo(pluginOverlay);
+
+  startTime = new Date();
 }
 
-var startTime = new Date();
-
 function handleMessage(event) {
-  var text = "";
+  var text = '';
 
   var message = event.originalEvent;
   if (message.data === 1) {
-    text = "1 iteration";
+    text = '1 iteration';
   } else {
-    text = message.data + " iterations";
+    text = message.data + ' iterations';
   }
   var curTime = new Date();
-  text += " (" + getTimeString(curTime - startTime) + ")";
+  text += ' (' + getTimeString(curTime - startTime) + ')';
 
   var statsOverlay = $('#render-demo-stats');
   statsOverlay.text(text);
@@ -54,21 +56,21 @@ function getTimeString(duration) {
 
   var seconds = Math.floor(duration / SECOND);
 
-  var formatString = "";
+  var formatString = '';
 
   if (days > 0) {
-    formatString += (days + "d ");
+    formatString += (days + 'd ');
   }
 
   if (hours > 0 || formatString.length > 0) {
-    formatString += (hours + "h ");
+    formatString += (hours + 'h ');
   }
 
   if (minutes > 0 || formatString.length > 0) {
-    formatString += (minutes + "min ");
+    formatString += (minutes + 'min ');
   }
 
-  formatString += (seconds + "s ");
+  formatString += (seconds + 's ');
 
   return formatString.slice(0, formatString.length - 1);
 }
