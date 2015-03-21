@@ -149,6 +149,9 @@ h2, .h2-space:before {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
   visibility: hidden;
 }
 
