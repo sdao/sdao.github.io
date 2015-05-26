@@ -167,11 +167,11 @@ footer {
   position: relative;
 }
 
-  .gallery figure a:hover {
+  .gallery a:hover {
     border: none;
   }
 
-  .gallery figure a:hover figcaption {
+  .gallery a:hover figcaption {
     color: #4ecd3a;
   }
 
