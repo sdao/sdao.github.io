@@ -172,20 +172,21 @@ footer {
   }
 
   .gallery figure a:hover figcaption {
-    background: rgba(0, 0, 0, 1);
+    color: #4ecd3a;
   }
 
   .gallery figcaption {
-    bottom: 5px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: 0;
-    padding: 8px;
+    padding: 1.0em;
+    margin: 0;
     position: absolute;
-    background: rgba(0, 0, 0, .5);
     color: white;
     font-size: 0.8em;
-    transition: background-color 0.5s;
+    text-shadow: 1px 1px 0 black;
+    transition: color 0.5s;
   }
 
   .gallery img {
