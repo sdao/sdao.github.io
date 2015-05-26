@@ -1,0 +1,15 @@
+- url: /index.html
+  display_url: /
+  title: Home
+
+- url: /games/index.html
+  display_url: /games/
+  title: Games
+
+- url: /plugins/index.html
+  display_url: /plugins/
+  title: Plugins
+
+- url: /software/index.html
+  display_url: /software/
+  title: Software

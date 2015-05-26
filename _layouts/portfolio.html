@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
+    <title>Steven Dao | {{ page.title }}</title>
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="/nomnomnom.css" rel="stylesheet" type="text/css" title="CV">
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <meta charset="utf-8">
-    <meta name="description" content="Student at the University of Texas at Austin. Computer graphics and animation enthusiast. Former intern at Google and DreamWorks Animation.">
+    <meta name="description" content="Programmer and technical artist. UT Austin graduate.">
     <meta name="viewport" content="width=600">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="/nomnomnom.js"></script>
@@ -16,22 +17,26 @@
     <div id="outer">
       <div id="flexbox">
         <header>
-          <h1><a href="http://sdao.me">Steven Dao</a></h1>
-          <ul>
-            <li>(832) 582-0950</li>
-            <li><a href="mailto:steven@sdao.me">steven@sdao.me</a></li>
-            <li><a href="dao_resume.pdf">R&eacute;sum&eacute;</a> (PDF file)</li>
-            <li><a href="http://github.com/sdao">GitHub</a> &bull; <a href="http://vimeo.com/stevedao">Vimeo</a> &bull; <a href="http://www.linkedin.com/in/shdao/en">LinkedIn</a></li>
+          <h1><a href="/">Steven Dao</a></h1>
+          <ul class="sections">
+            {% for site_page in site.data.nav %}
+              {% if page.url == site_page.url %}
+                <li><a href="{{ site_page.display_url }}" class="selected">{{ site_page.title }}</a></li>
+              {% else %}
+                <li><a href="{{ site_page.display_url }}">{{ site_page.title }}</a></li>
+              {% endif %}
+            {% endfor %}
           </ul>
-          <p>
-            I'm a student of computer science and philosophy at the University of Texas at Austin. My interests are in computer graphics and animation, especially in physical effects simulation.
-          </p>
-          <p>
-            In the past, I've interned with <a href="http://www.google.com/about/locations/boston/">Google</a> in Cambridge, MA,
-            and with <a href="http://www.dreamworksanimation.com/">DreamWorks Animation</a> in Glendale, CA.
-          </p>
+          <div class="footer-sidebar">
+            {% include footer.html %}
+          </div>
         </header>
-        {{ content }}
+        <div id="content">
+          {{ content }}
+        </div>
+        <footer>
+          {% include footer.html %}
+        </footer>
       </div>
     </div>
   </body>

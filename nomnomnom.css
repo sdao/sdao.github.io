@@ -34,33 +34,165 @@ html, body {
   align-items: stretch;
 }
 
-#flexbox > div, header {
-  padding: 10px 30px 20px 30px;
+header, footer, #content {
   box-sizing: border-box;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  width: 320px;
+  padding: 10px 0 20px 30px;
 
   -webkit-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
-#flexbox > header {
-  background-color: #333;
-  color: #fff;
+  header p, footer p {
+    margin-top: 2em;
+  }
+
+  header a, footer a {
+    color: #4ecd3a;
+  }
+
+  header h1, footer h1 {
+    font-size: 3em;
+    font-weight: 400;
+    margin: 0;
+  }
+
+    header h1 a, footer h1 a {
+      color: #fff;
+    }
+
+    header h1 a:hover, footer h1 a:hover {
+      border: none;
+    }
+
+  header h2, footer h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+
+  header ul, footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  header .sections li {
+    font-size: 1.4em;
+  }
+
+    header .sections li a {
+      margin-left: -0.5em;
+      padding-left: 0.5em;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+      display: inline-block;
+      width: 100%;
+      transition: background-color 0.5s;
+    }
+
+    header .sections li a:hover {
+      border: none;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+  header .sections .selected {
+    background-color: #4ecd3a;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+    header .sections .selected:hover {
+      background-color: #4ecd3a !important;
+    }
+
+#content {
+  padding: 0;
+
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
-#flexbox > div h1, .h1-space:before {
-  font-size: 2em;
-  font-weight: 700;
-  margin: 0.5em 0;
+  #content > div {
+    padding: 10px 30px 30px 30px;
+  }
+
+  #content > div:nth-child(2n) {
+    background-color: #eee;
+  }
+
+  #content h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0.5em 0;
+  }
+
+  #content h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #444;
+    margin: 0.7em 0;
+  }
+
+  #content h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #666;
+    margin: 0.3em 0;
+  }
+
+  #content img {
+    max-width: 100%;
+  }
+
+footer {
+  display: none;
 }
 
-.h1-space:before, .h2-space:before {
-  content: "\a0";
-  visibility: hidden;
+.gallery {
+  display: -webkit-flex;
+  display: flex;
 }
 
-#flexbox > div.odd {
-  background-color: #eee;
+.gallery figure {
+  margin: 0.1em;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  position: relative;
 }
+
+  .gallery figure a:hover {
+    border: none;
+  }
+
+  .gallery figure a:hover figcaption {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  .gallery figcaption {
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 8px;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    font-size: 0.8em;
+    transition: background-color 0.5s;
+  }
+
+  .gallery img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 
 a {
   color: #309d2b;
@@ -74,95 +206,74 @@ a:hover {
   border-bottom: 0.15em solid;
 }
 
-header h1 {
-  font-size: 4em;
-  font-weight: 700;
-  margin: 0;
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8rem;
+  background-color: #309d2b;
+  color: white;
+  padding: 0.4rem;
+  margin: 0.2rem 0.2rem 0.2rem 0.5rem;
+  border-radius: 0.3rem;
 }
 
-header p {
-  margin-top: 2em;
+.button:hover {
+  border: none;
+  background-color: #333;
+  transition: background-color 0.5s;
 }
 
-header a {
-  color: #4ecd3a;
+  .button i {
+    margin-top: -0.2em;
+  }
+
+.download {
+  background-color: #0070bb;
 }
 
-header h1 a {
-  color: #fff;
+.flextitle {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-header ul {
-  list-style-type: none;
-  padding: 0;
-  margin-left: 0;
+  .flextitle div {
+    text-align: right;
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .flextitle .button {
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 
-h2, .h2-space:before {
-  font-size: 1.2em;
-  font-weight: 700;
-  color: #444;
-  margin: 1em 0;
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.cc {
+  font-size: 0.8em;
 }
 
 .tolkien p {
   margin: 0;
-}
-
-#render-demo {
-  display: inline-block;
-  position: relative;
-  width: 450px;
-  height: 337px;
-}
-
-#render-demo-static {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#render-demo-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  visibility: hidden;
-  color: #fff;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-#render-demo-overlay div {
-  margin: 1em;
-}
-
-#render-demo-overlay:hover {
-  opacity: 1;
-}
-
-#render-demo-pnacl {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-  visibility: hidden;
-}
-
-#render-demo-stats {
-  position: absolute;
-  bottom: 0.5em;
-  left: 0.5em;
-  padding: 0.5em;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
 }
 
 ::-moz-selection {
@@ -175,72 +286,36 @@ h2, .h2-space:before {
   background: #4ecd3a;
 }
 
-@media only screen and (max-width: 600px) and (orientation: portrait), only print {
+@media screen and (max-width: 40em) {
   #flexbox {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
 
-  #flexbox > header, #flexbox > div {
-    min-width: 400px;
-    max-width: 100%;
-    overflow-x: hidden;
+  header {
+    text-align: center;
   }
 
-  #flexbox > div.continue {
-    padding-top: 0;
-  }
-
-  #flexbox > div.notitle {
-    padding-top: 0;
-  }
-
-  .h1-space:before, .h2-space:before {
-    /* No spacer when vertical. */
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 601px), only screen and (orientation: landscape) {
-  #flexbox {
-    -webkit-flex-direction: row;
-    flex-direction: row;
-  }
-
-  #flexbox > header {
-    width: 400px;
-  }
-
-  #flexbox > div {
-    width: 600px;
-  }
-
-  #flexbox > div.tiny {
-    width: 400px;
-  }
-
-  #flexbox > div.short {
-    width: 500px;
-  }
-
-  #flexbox > div.continue {
-    padding-left: 0;
-  }
-
-  #flexbox > div.notitle {
-    padding-top: 20px;
-  }
-
-  #flexbox > div h1 {
-    width: 300px;
-  }
-
-  header h1 {
-    width: 300px;
-  }
-
-  .h1-space:before, .h2-space:before {
-    /* Need a spacer to align empty title when horizontal. */
+  header, footer {
+    width: 100%;
+    padding: 10px 30px 20px 30px;
     display: block;
+  }
+
+  header .sections li {
+    font-size: 1em;
+    display: inline-block;
+    margin: 0;
+  }
+
+  header .sections li a {
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    padding: 0.5em;
+    width: auto;
+  }
+
+  .footer-sidebar {
+    display: none;
   }
 }

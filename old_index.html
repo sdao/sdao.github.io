@@ -1,0 +1,165 @@
+---
+layout: portfolio
+title: Steven Dao
+---
+
+<div>
+  <h1>Colorless</h1>
+  <p>
+    A 2D story-based puzzle game produced by Team Potato Lab (Aaron Villalpando, Cindy To, Katie Park, Ronald Yam, and yours truly) for UT Austin's Fall 2014 2D <a href="http://gamedev.utexas.edu/">Game Development Capstone</a>. Check out the trailer below! <a href="https://colorlessgame.wordpress.com/">Visit our website for more info and to play the game.</a>
+  </p>
+  <iframe width="520" height="293" src="//www.youtube-nocookie.com/embed/wPkHyGfH4GU?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="continue tiny notitle">
+  <p>
+    <video autoplay loop width="160" height="160">
+      <source src="images/colorless_char_move.webm" type="video/webm">
+      <source src="images/colorless_char_move.mp4" type="video/mp4">
+      <img src="images/colorless_char_move.gif" alt="Character move animation from Colorless." width="160">
+    </video>
+    <video autoplay loop width="160" height="160">
+      <source src="images/colorless_rock_explode.webm" type="video/webm">
+      <source src="images/colorless_rock_explode.mp4" type="video/mp4">
+      <img src="images/colorless_rock_explode.gif" alt="Rock explosion animation from Colorless." width="160">
+    </video>
+  </p>
+  <p>
+    Ronald Yam and I created most of the animations for the game.
+    I rigged the character while he animated it.
+    Cindy To created most of the base artwork for animated assets.
+  </p>
+  <p>
+    <img src="images/maya_loop_cache_gui.png" alt="MEL script and GUI for looping Maya nCloth." width="340">
+  </p>
+  <p>
+    To make our character's cloth animate seamlessly, we created a MEL script for Maya that loops nCloth simulations <a href="https://github.com/sdao/mayatools/tree/master/LoopNCache">(view on GitHub)</a>.
+  </p>
+</div>
+<div class="odd">
+  <h1>Water Simulation Plugins</h1>
+  <p>
+    Open-source Maya C++ plugin <a href="https://github.com/sdao/TessendorfOceanMaya">(view on GitHub)</a>
+    and 3ds Max C++ plugin <a href="https://github.com/sdao/iWaveOcean">(view on GitHub)</a>.
+  </p>
+  <iframe src="//player.vimeo.com/video/83008229?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>
+    Water drop demo simulated with the plugin <a href="http://vimeo.com/83008229">(play on Vimeo)</a>.
+  </p>
+</div>
+<div class="odd continue tiny notitle">
+  <p>
+    Based on <a href="http://people.clemson.edu/~jtessen/reports.html">Jerry Tessendorf's ocean simulation course notes</a> from Siggraph 2004.
+    Both the Maya and 3ds Max plugins support generating ambient waves on an open ocean.
+  </p>
+  <p>
+    At the heart of the process, they use an FFT to sum many individual waves constructed from a statistical model.
+    The 3ds Max version also supports dynamic interaction with collision objects using a convolution kernel over a grid of wave points (Tessendorf's &ldquo;iWave&rdquo; method).
+  </p>
+  <h2>More video demos</h2>
+  <ul>
+    <li>You can use the plugin to <a href="http://vimeo.com/83149191">draw shapes such as hearts in the water</a></li>
+    <li>Check out the range of <a href="http://vimeo.com/104273062">range of controls available to artists</a> for customizing waves and water dynamics</li>
+  </ul>
+</div>
+<div class="">
+  <h1>Terrain Generation Plugins</h1>
+  <p>
+    3ds Max modifier <a href="https://github.com/sdao/DiamondSquare">(view on GitHub)</a> and Houdini SOP <a href="https://github.com/sdao/houdini-diamondsquare">(view on GitHub)</a>.
+  </p>
+  <iframe src="//player.vimeo.com/video/84369191?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>
+    The terrain outside the window is completely procedurally generated in 3ds Max <a href="http://vimeo.com/84369191">(play on Vimeo)</a>.
+    These plugins implement the <a href="http://en.wikipedia.org/wiki/Diamond-square_algorithm">diamond-square algorithm</a>.
+    It generates terrain of varying roughness, from deserts to mountains.
+  </p>
+</div>
+<div class="odd short">
+  <h1>Houdini Sims</h1>
+  <h2>Rube Goldberg machine</h2>
+  <iframe src="//player.vimeo.com/video/104258383?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>A Rube Goldberg machine in Houdini using rigid bodies, wires, and FLIP fluids. 100% simulated; no keyframes (except for the motion of the camera). Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/104258383">(play on Vimeo)</a>.</p>
+</div>
+<div class="odd continue short h1-space">
+  <h2>Heartcloud</h2>
+  <iframe src="//player.vimeo.com/video/105207973?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>A simple animation of a cloud creating a heart shape. Uses volumetric cloud simulation in Houdini, with blendshapes (morph targets) driving the heart animation. Houdini Apprentice / rendered in Mantra <a href="http://vimeo.com/105207973">(play on Vimeo)</a>.</p>
+</div>
+<div class="short">
+  <h1>Renderers</h1>
+  <h2>Global illumination path tracer</h2>
+  <p>
+    <img src="images/pathtracer_dragon_800iters_30min.png" alt="Cornell box and Stanford dragon, rendered with path tracing." width="450">
+  </p>
+  <p>
+    A Monte Carlo global illumination path tracer in C++ <a href="https://github.com/sdao/path-tracer">(view on GitHub)</a>. Uses the <a href="https://embree.github.io/">Intel Embree kernels</a> for ray tracing.
+    This Cornell box demonstrating different physically-accurate materials took 30 minutes to render.
+  </p>
+</div>
+<div class="continue h1-space short">
+  <p class="h2-space"></p>
+  <div id="render-demo">
+    <img id="render-demo-static" src="images/pathtracer_spheres_800iters_20min.png" alt="Row of spheres, demonstrating depth of field." width="450">
+    <div id="render-demo-overlay">
+      <div id="render-demo-overlay-text">
+        <p>Click to try the Portable Native Client (PNaCl) version of the path tracer in your web browser.</p>
+      </div>
+    </div>
+    <div id="render-demo-pnacl"></div>
+    <div id="render-demo-stats"></div>
+  </div>
+  <p>
+    This row of spheres demonstrates rendering with depth of field (the aperture being <em>&fnof;</em>/16 in this image). The rendering was stopped after about 20 minutes and 800 iterations. (Timings recorded on a 2.3 GHz Intel Core i5.)
+  </p>
+</div>
+<div class="continue h1-space short">
+  <h2>Reyes renderer</h2>
+  <iframe src="//player.vimeo.com/video/88600315?byline=0&amp;portrait=0" width="450" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <p>
+    A parallelized micropolygon renderer in Scala <a href="https://github.com/sdao/hugo-reyes">(view on GitHub)</a>.
+    Uses the <a href="http://en.wikipedia.org/wiki/Reyes_rendering">Reyes algorithm</a> popularized by Pixar's RenderMan. Supports Bézier patches, displacement mapping, shadow maps, toon shading, and animation.
+  </p>
+</div>
+<div class="odd tiny">
+  <h1>MotionBuilder + Windows Phone</h1>
+  <p>This Windows Phone app <a href="https://github.com/sdao/mb-device-tcp-phone">(view on GitHub)</a> transmits your phone's physical 3D orientation. Make a MoBu object mimic your phone's rotation in realtime!</p>
+  <p>
+    <img src="images/mobu_phone.png" alt="MotionBuilder with the custom plugin loaded." width="200">
+  </p>
+</div>
+<div class="odd continue short notitle">
+  <p>The matching TCP server and MotionBuilder plugin <a href="https://github.com/sdao/mb-device-tcp">(view both together on GitHub)</a> run on a local computer to receive the phone's orientation, letting you control objects in MotionBuilder by physically rotating your phone.</p>
+  <p>The TCP server runs on the same computer as MotionBuilder and simply relays orientation data from the phone to the MotionBuilder plugin. (This made testing easier!)</p>
+  <p>
+    <img src="images/mobu_scene.png" alt="MotionBuilder with the custom plugin loaded." width="360">
+  </p>
+</div>
+<div class="">
+  <h1>Real-Time OpenGL Sims</h1>
+  <h2>Basic mass-spring cloth simulator</h2>
+  <p>Implemented in Scala using OpenGL via the Java OpenGL libraries <a href="https://github.com/sdao/verlet-cloth">(view on GitHub)</a>. Simulates a simple mass-spring cloth system using Verlet integration. It supports cloth collision with a sphere.</p>
+  <p>
+    <img src="images/gl-cloth.png" alt="Cloth touching a sphere." width="280">
+  </p>
+  <p>
+    Screenshot of the simulation running in realtime <a href="https://vimeo.com/77792276">(video on Vimeo)</a>.
+  </p>
+</div>
+<div class="continue tiny notitle">
+  <h2>Fur/grass simulation in shaders</h2>
+  <p>
+    Implemented in C++ using OpenGL shaders <a href="https://github.com/sdao/fur-demo">(view on GitHub)</a>.
+    Uses a &ldquo;shell&rdquo; shader method, based off of <a href="http://www.catalinzima.com/xna/tutorials/fur-rendering/">Catalin Zima's article for the XNA game engine</a>.
+    This implementation uses OpenGL 3.3 Core with GLSL shaders, and it also works well for rolling grass.
+  </p>
+  <p>
+    <img src="images/gl-fur-grass.png" alt="Grass using fur simulation." width="280">
+  </p>
+  <p>
+    Screenshot <a href="https://vimeo.com/91224543">(video on Vimeo)</a>.
+  </p>
+</div>
+<div class="odd tiny notitle">
+  <p>
+    Thanks for visiting! I last updated my homepage on 21 March 2015.
+  </p>
+</div>
