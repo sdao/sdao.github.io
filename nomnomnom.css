@@ -119,11 +119,11 @@ header, footer {
   flex: 1 1 auto;
 }
 
-  #content > div {
+  #content > section {
     padding: 10px 30px 30px 30px;
   }
 
-  #content > div:nth-child(2n) {
+  #content > section:nth-child(2n) {
     background-color: #eee;
   }
 
