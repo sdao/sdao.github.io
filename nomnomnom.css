@@ -40,6 +40,7 @@ header, footer, #content {
 
 header, footer {
   background-color: #333;
+  border-right: 3px solid #4ecd3a;
   color: #fff;
   width: 320px;
   padding: 10px 0 20px 30px;
@@ -317,27 +318,39 @@ a:hover {
     flex-direction: column;
   }
 
-  header {
-    text-align: center;
-  }
-
   header, footer {
     width: 100%;
     padding: 10px 30px 20px 30px;
     display: block;
+    
+    border-right: none;
+  }
+  
+  header {
+    border-bottom: 3px solid #4ecd3a;
+    padding-bottom: 0;
+    text-align: center;
   }
 
-  header .sections li {
-    font-size: 1em;
-    display: inline-block;
-    margin: 0;
-  }
+    header .sections {
+      margin-bottom: 0;
+    }
 
-  header .sections li a {
-    margin-left: 0.1em;
-    margin-right: 0.1em;
-    padding: 0.5em;
-    width: auto;
+      header .sections li {
+        font-size: 1em;
+        display: inline-block;
+        margin: 0;
+      }
+
+        header .sections li a {
+          margin-left: 0.1em;
+          margin-right: 0.1em;
+          padding: 0.5em;
+          width: auto;
+        }
+  
+  footer {
+    border-top: 3px solid #4ecd3a;
   }
 
   .footer-sidebar {
