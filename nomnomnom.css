@@ -248,43 +248,50 @@ a:hover {
   .gallery a {
     -webkit-flex: 0 0 33%;
     flex: 0 0 33%;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
   }
 
   .gallery a:hover {
     border: none;
-    -webkit-transform: translateY(-0.5em);
-    transform: translateY(-0.5em);
   }
 
   .gallery a:hover figcaption {
     color: #4ecd3a;
   }
+  
+  .gallery a:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 
   .gallery figure {
     margin: 0.1em;
     position: relative;
+    line-height: 0;
+    overflow: hidden;
   }
 
-    .gallery figcaption {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 0;
-      padding: 1.0em;
-      margin: 0;
-      position: absolute;
-      color: white;
-      font-size: 0.8em;
-      text-shadow: 1px 1px 0 black;
-      transition: color 0.5s;
-    }
+  .gallery figcaption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 1.0em;
+    margin: 0;
+    position: absolute;
+    color: white;
+    font-size: 0.8em;
+    text-shadow: 1px 1px 0 black;
+    transition: color 0.5s;
+    line-height: 1.2em;
+  }
 
-    .gallery img {
-      object-fit: contain;
-      width: 100%;
-    }
+  .gallery img {
+    object-fit: contain;
+    width: 100%;
+    
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
 
 .extra-top-space {
   margin-top: 1em;
