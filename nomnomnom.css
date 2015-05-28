@@ -157,46 +157,6 @@ footer {
   display: none;
 }
 
-.gallery {
-  display: -webkit-flex;
-  display: flex;
-}
-
-.gallery figure {
-  margin: 0.1em;
-  -webkit-flex: 0 1 auto;
-  flex: 0 1 auto;
-  position: relative;
-}
-
-  .gallery a:hover {
-    border: none;
-  }
-
-  .gallery a:hover figcaption {
-    color: #4ecd3a;
-  }
-
-  .gallery figcaption {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 1.0em;
-    margin: 0;
-    position: absolute;
-    color: white;
-    font-size: 0.8em;
-    text-shadow: 1px 1px 0 black;
-    transition: color 0.5s;
-  }
-
-  .gallery img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-  }
-
 a {
   color: #309d2b;
   text-decoration: none;
@@ -255,7 +215,7 @@ a:hover {
     flex: 0 0 auto;
   }
 
-.video-maxsize {
+.reactive-container {
   max-width: 1200px;
 }
 
@@ -274,6 +234,52 @@ a:hover {
     width: 100%;
     height: 100%;
   }
+
+.gallery {
+  display: -webkit-flex;
+  display: flex;
+  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+  .gallery a {
+    -webkit-flex: 0 0 33%;
+    flex: 0 0 33%;
+  }
+
+  .gallery a:hover {
+    border: none;
+  }
+
+  .gallery a:hover figcaption {
+    color: #4ecd3a;
+  }
+
+  .gallery figure {
+    margin: 0.1em;
+    position: relative;
+  }
+
+    .gallery figcaption {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 1.0em;
+      margin: 0;
+      position: absolute;
+      color: white;
+      font-size: 0.8em;
+      text-shadow: 1px 1px 0 black;
+      transition: color 0.5s;
+    }
+
+    .gallery img {
+      object-fit: contain;
+      width: 100%;
+    }
 
 .tolkien p {
   margin: 0;
