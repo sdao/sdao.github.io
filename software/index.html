@@ -27,6 +27,17 @@ title: Software
   <p>
     This row of spheres demonstrates rendering with depth of field (the aperture being <em>&fnof;</em>/16 in this image). The rendering was stopped after about 20 minutes and 800 iterations. (All of these timings were recorded on a 2.3 GHz Intel Core i5.)
   </p>
+  <h3>Features</h3>
+  <ul>
+    <li>Reads custom OBJ polygon meshes or Platonic solids</li>
+    <li>BRDF-based diffuse (Lambert), specular (Phong), and metallic (dielectric) materials included</li>
+    <li>Depth of field</li>
+    <li>Multi-threaded</li>
+    <li>Also samples direct illumination to reduce convergence time</li>
+    <li>Can perform slightly-biased sampling to reduce noise</li>
+    <li>JSON-based scene file format</li>
+    <li>Outputs HDR imagery to OpenEXR format</li>
+  </ul>
 </section>
 
 <section id="reyes">
