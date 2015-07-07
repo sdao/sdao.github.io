@@ -216,23 +216,27 @@ a:hover {
   font-size: 0.8rem;
   background-image: linear-gradient(to bottom, #52bf4f, #208c1a);
   background-size: 100% 200%;
-  background-position: 0 100%;
+  background-position: 0 95%;
   color: white;
   padding: 0.4rem;
   margin: 0.2rem 0.2rem 0.2rem 0.5rem;
   border-radius: 0.1rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  transition: background-position 0.5s;
+  transition: background-position 0.5s, color 0.5s;
 }
 
 .button:hover {
   border: none;
-  background-position: 0 0px;
+  background-position: 0 0;
 }
 
   .button i {
     margin-top: -0.2em;
   }
+
+.button:active {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 .download {
   background-image: linear-gradient(to bottom, #2292dd, #0060aa);
