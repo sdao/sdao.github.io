@@ -165,13 +165,13 @@ header, footer {
 
   #content h2 {
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 400;
     color: #444;
     margin: 0.7em 0;
   }
 
   #content h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 400;
     color: #666;
     margin: 0.3em 0;
@@ -391,5 +391,17 @@ a:hover {
 
   #content > section:not(.section-header) {
     margin: 0 10px 15px 10px;
+  }
+
+  #content h1 {
+    font-size: 1.5em;
+  }
+
+  #content h2 {
+    font-size: 1.3em;
+  }
+
+  #content h3 {
+    font-size: 1.1em;
   }
 }
