@@ -4,6 +4,7 @@ html, body {
   font-family: "Roboto Slab", Georgia, sans-serif;
   font-weight: 400;
   color: #444;
+  background-color: #f0f0f0;
 }
 
 #outer {
@@ -39,7 +40,7 @@ header, footer, #content {
 }
 
 header, footer {
-  background-color: #333;
+  background-color: #303940;
   color: #fff;
   width: 320px;
   padding: 10px 0 20px 30px;
@@ -62,11 +63,6 @@ header, footer {
     font-size: 3em;
     font-weight: 400;
     margin: 0;
-    text-shadow: 0 0.02em 0 #ccc,
-                 0 0.04em 0 #bbb,
-                 0 0.06em 0 #aaa,
-                 0 0.08em 0 #999,
-                 0 0.10em 0 #888;
   }
 
     header h1 a, footer h1 a {
@@ -119,7 +115,7 @@ header, footer {
       background: linear-gradient(to bottom, #4ecd3a, #2cab18) !important;
     }
 
-#content {
+#content, #front-page {
   padding: 0;
   min-width: 0;
   width: 100%;
@@ -130,10 +126,14 @@ header, footer {
 
   #content > section {
     padding: 10px 30px 30px 30px;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 0.1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
 
-  #content > section:nth-child(2n) {
-    background-color: #eee;
+  #content > section:not(.section-header) {
+    margin: 20px;
   }
 
   #content h1 {
@@ -158,6 +158,18 @@ header, footer {
 
   #content img {
     max-width: 100%;
+  }
+
+#content.front-page {
+  background-image: url("/images/feather.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding-bottom: 6em;
+}
+
+  #content.front-page > section {
+    color: #222;
+    background-color: rgba(255, 255, 255, 0.9);
   }
 
 footer {
@@ -202,7 +214,6 @@ a:hover {
   }
 
 .download {
-  background-color: #0070bb;
   background-image: linear-gradient(to bottom, #2292dd, #0060aa);
 }
 
@@ -244,63 +255,6 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-.gallery {
-  display: -webkit-flex;
-  display: flex;
-
-  margin: 1em 0 0 0;
-  padding: 0;
-  width: 100%;
-}
-
-  .gallery a {
-    -webkit-flex: 0 0 33%;
-    flex: 0 0 33%;
-  }
-
-  .gallery a:hover {
-    border: none;
-  }
-
-  .gallery a:hover figcaption {
-    color: #4ecd3a;
-  }
-
-  .gallery a:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  .gallery figure {
-    margin: 0.2em;
-    position: relative;
-    line-height: 0;
-    overflow: hidden;
-  }
-
-  .gallery figcaption {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 1.0em;
-    margin: 0;
-    position: absolute;
-    color: white;
-    font-size: 0.8em;
-    text-shadow: 1px 1px 0 black;
-    transition: color 0.5s;
-    line-height: 1.2em;
-  }
-
-  .gallery img {
-    object-fit: contain;
-    width: 100%;
-
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
   }
 
 .extra-top-space {
@@ -380,5 +334,13 @@ a:hover {
 
   .footer-sidebar {
     display: none;
+  }
+
+  #content > section {
+    margin-bottom: 15px;
+  }
+
+  #content > section:not(.section-header) {
+    margin: 10px;
   }
 }
