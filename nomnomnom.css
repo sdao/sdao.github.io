@@ -63,10 +63,10 @@ header, footer {
     font-weight: 400;
     margin: 0;
     text-shadow: 0 0.02em 0 #ccc,
-                 0 0.04em 0 #c9c9c9,
-                 0 0.06em 0 #bbb,
-                 0 0.08em 0 #b9b9b9,
-                 0 0.10em 0 #aaa;
+                 0 0.04em 0 #bbb,
+                 0 0.06em 0 #aaa,
+                 0 0.08em 0 #999,
+                 0 0.10em 0 #888;
   }
 
     header h1 a, footer h1 a {
