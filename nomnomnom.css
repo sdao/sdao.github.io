@@ -115,7 +115,7 @@ header, footer {
       background: linear-gradient(to bottom, #4ecd3a, #2cab18) !important;
     }
 
-#content, #front-page {
+#content {
   padding: 0;
   min-width: 0;
   width: 100%;
@@ -152,6 +152,11 @@ header, footer {
     margin: 0 20px 20px 20px;
   }
 
+  #content > section:not(.section-header):first-child {
+    max-width: 800px;
+    margin: 20px;
+  }
+
   #content h1 {
     font-size: 2em;
     font-weight: 700;
@@ -186,11 +191,6 @@ header, footer {
   #content.front-page > section {
     color: #222;
     background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  #content.front-page > section:not(.section-header) {
-    max-width: 800px;
-    margin: 20px
   }
 
 footer {
@@ -288,6 +288,23 @@ a:hover {
 .extra-top-space {
   margin-top: 1em;
 }
+
+.error {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+  .error h1 {
+    font-size: 6em !important;
+    font-family: "VT323", monospace;
+  }
+
+  .error .error-description {
+    border: 1px solid #ccc;
+    padding: 0.6em;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+  }
 
 .tolkien p {
   margin: 0;
