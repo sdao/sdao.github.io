@@ -35,11 +35,11 @@ html, body {
   align-items: stretch;
 }
 
-header, footer, #content {
+nav, footer, #content {
   box-sizing: border-box;
 }
 
-header, footer {
+nav, footer {
   background-color: #303940;
   color: #fff;
   width: 320px;
@@ -51,46 +51,46 @@ header, footer {
   flex: 0 0 auto;
 }
 
-  header p, footer p {
+  nav p, footer p {
     margin-top: 2em;
   }
 
-  header a, footer a {
+  nav a, footer a {
     color: #4ecd3a;
   }
 
-  header h1, footer h1 {
+  nav h1, footer h1 {
     font-size: 3em;
     font-weight: 400;
     margin: 0;
   }
 
-    header h1 a, footer h1 a {
+    nav h1 a, footer h1 a {
       color: #fff;
     }
 
-    header h1 a:hover, footer h1 a:hover {
+    nav h1 a:hover, footer h1 a:hover {
       border: none;
     }
 
-  header h2, footer h2 {
+  nav h2, footer h2 {
     color: white;
     font-weight: 400;
     font-size: 1.4em;
     margin-bottom: 0;
   }
 
-  header ul, footer ul {
+  nav ul, footer ul {
     list-style-type: none;
     padding: 0;
     margin-left: 0;
   }
 
-  header .sections li {
+  nav .sections li {
     font-size: 1.4em;
   }
 
-    header .sections li a {
+    nav .sections li a {
       margin-left: -0.5em;
       padding-left: 0.5em;
       padding-top: 0.2em;
@@ -100,18 +100,18 @@ header, footer {
       transition: background-color 0.5s;
     }
 
-    header .sections li a:hover {
+    nav .sections li a:hover {
       border: none;
       background-color: rgba(0, 0, 0, 0.3);
     }
 
-  header .sections .selected {
+  nav .sections .selected {
     background: linear-gradient(to bottom, #4ecd3a, #2cab18) !important;
     color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
 
-    header .sections .selected:hover {
+    nav .sections .selected:hover {
       background: linear-gradient(to bottom, #4ecd3a, #2cab18) !important;
     }
 
@@ -128,33 +128,39 @@ header, footer {
 
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
-  #content > section {
+  #content > header {
     padding: 10px 30px 20px 30px;
+    margin: 0 0 20px 0;
     background-color: white;
-    border-radius: 0.1rem;
-    margin-bottom: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
 
-  #content > section.section-header {
-    -webkit-align-self: stretch;
-    align-self: stretch;
+  #content > section {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
   }
 
-  #content > section:not(.section-header) {
-    max-width: 800px;
-    margin: 0 20px 20px 20px;
+  #content > section:first-child {
+    padding: 20px;
   }
 
-  #content > section:not(.section-header):first-child {
+  #content > section > article {
+    padding: 10px 30px 20px 30px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 0.1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     max-width: 800px;
-    margin: 20px;
+    text-align: left;
+  }
+
+  #content > section > article.allow-shrink {
+    display: inline-block;
   }
 
   #content h1 {
@@ -188,7 +194,7 @@ header, footer {
   padding-bottom: 8em;
 }
 
-  #content.front-page > section {
+  #content.front-page > header {
     color: #222;
     background-color: rgba(255, 255, 255, 0.8);
   }
@@ -325,11 +331,11 @@ a:hover {
 }
 
 @media screen and (min-width: 40em) and (max-width: 60em) {
-  header, footer {
+  nav, footer {
     width: 220px;
   }
 
-  header h1, footer h1 {
+  nav h1, footer h1 {
     padding-top: 0.1em;
     font-size: 2em;
   }
@@ -353,28 +359,28 @@ a:hover {
     flex-direction: column;
   }
 
-  header, footer {
+  nav, footer {
     width: 100%;
     padding: 10px 30px 20px 30px;
     display: block;
   }
 
-  header {
+  nav {
     padding-bottom: 0;
     text-align: center;
   }
 
-    header .sections {
+    nav .sections {
       margin-bottom: 0;
     }
 
-      header .sections li {
+      nav .sections li {
         font-size: 1em;
         display: inline-block;
         margin: 0;
       }
 
-        header .sections li a {
+        nav .sections li a {
           margin-left: 0.1em;
           margin-right: 0.1em;
           padding: 0.5em;
@@ -385,16 +391,16 @@ a:hover {
     display: none;
   }
 
+  #content > header {
+    margin: 0 0 15px 0;
+  }
+
   #content > section {
-    margin-bottom: 15px;
+    padding: 0 10px 15px 10px;
   }
 
-  #content > section:not(.section-header) {
-    margin: 0 10px 15px 10px;
-  }
-
-  #content > section:not(.section-header):first-child {
-    margin: 10px;
+  #content > section:first-child {
+    padding: 15px 10px;
   }
 
   #content h1 {
