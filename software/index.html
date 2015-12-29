@@ -1,7 +1,9 @@
 ---
 layout: portfolio
 title: Software
+published: true
 ---
+
 
 <section id="content">
 
@@ -14,13 +16,13 @@ title: Software
     <article>
       <div class="flextitle">
         <h2>Global illumination path tracer</h2>
-        <a class="button" href="https://github.com/sdao/path-tracer"><i class="fa fa-github"></i> GitHub Repo</a>
+        <a class="button" href="https://github.com/sdao/xray"><i class="fa fa-github"></i> GPU Version</a><a class="button" href="https://github.com/sdao/path-tracer"><i class="fa fa-github"></i> CPU Version</a>
       </div>
       <div class="reactive-container">
         <img src="/images/pathtracer_dragon_800iters_30min.png" alt="Cornell box and Stanford dragon, rendered with path tracing">
       </div>
       <p>
-        A Monte Carlo global illumination path tracer written in C++, using the <a href="https://embree.github.io/">Intel Embree kernels</a> for ray tracing.
+        A Monte Carlo global illumination path tracer written in C++, using either the <a href="https://developer.nvidia.com/optix">Nvidia OptiX engine</a> on a CUDA-capable GPU or the <a href="https://embree.github.io/">Intel Embree kernels</a> on a CPU.
         I implemented this path tracer while reading Pharr and Humphreys&rsquo; excellent book <em><a href="http://www.pbrt.org">Physically Based Rendering</a></em>.
         This Cornell box (with the Stanford dragon, of course) demonstrating different physically-accurate materials took 30 minutes to render.
       </p>
