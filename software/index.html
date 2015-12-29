@@ -5,6 +5,7 @@ published: true
 ---
 
 
+
 <section id="content">
 
   <header>
@@ -20,19 +21,21 @@ published: true
         	<a class="button" href="https://github.com/sdao/xray"><i class="fa fa-github"></i> GPU Version</a><a class="button" href="https://github.com/sdao/path-tracer"><i class="fa fa-github"></i> CPU Version</a>
         </div>
       </div>
+      <p>
+        A Monte Carlo global illumination path tracer written in C++, using either the <a href="https://developer.nvidia.com/optix">Nvidia OptiX engine</a> on a CUDA-capable GPU or the <a href="https://embree.github.io/">Intel Embree kernels</a> on a CPU.
+        I implemented this path tracer while reading Pharr and Humphreys&rsquo; excellent book <em><a href="http://www.pbrt.org">Physically Based Rendering</a></em>.
+      </p>
       <div class="reactive-container">
         <img src="/images/gpu_dragon_4300spp_20min.png" alt="Cornell box and Stanford dragon, rendered with path tracing">
       </div>
       <p>
-        A Monte Carlo global illumination path tracer written in C++, using either the <a href="https://developer.nvidia.com/optix">Nvidia OptiX engine</a> on a CUDA-capable GPU or the <a href="https://embree.github.io/">Intel Embree kernels</a> on a CPU.
-        I implemented this path tracer while reading Pharr and Humphreys&rsquo; excellent book <em><a href="http://www.pbrt.org">Physically Based Rendering</a></em>.
         This Cornell box (with the Stanford dragon, of course) demonstrating different physically-accurate materials took 20 minutes to render for 4300 samples per pixel.
       </p>
       <div class="reactive-container">
         <img src="/images/gpu_spheres_4300spp_5min.png" alt="Row of spheres, demonstrating depth of field">
       </div>
       <p>
-        This row of spheres demonstrates rendering with depth of field (the aperture being <em>&fnof;</em>/16 in this image). The rendering was stopped after about 5 minutes and 4300 samples per pixel. (All of these timings were recorded on an Nvidia GeForce 750 Ti graphics card using Nvidia OptiX. This is roughly 2x-4x faster than an Intel Core i5-4590 3.3 GHz using Intel Embree.) 
+        This row of spheres demonstrates rendering with depth of field (the aperture being <em>&fnof;</em>/16 in this image). The rendering was stopped after about 5 minutes and 4300 samples per pixel. (All of these timings were recorded on an Nvidia GeForce 750 Ti graphics card using Nvidia OptiX. Depending on the scene, the GPU path tracer is roughly 2x-4x faster than an Intel Core i5-4590 3.3 GHz using Intel Embree.) 
       </p>
       <h3>Features</h3>
       <ul>
