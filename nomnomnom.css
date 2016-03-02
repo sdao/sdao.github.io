@@ -191,7 +191,7 @@ nav, footer {
   background-image: url("/images/xenia_flat.jpg");
   background-size: cover;
   background-position: center center;
-  padding-bottom: 8em;
+  padding-bottom: 16em;
 }
 
   #content.front-page > header {
