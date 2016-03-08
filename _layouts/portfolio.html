@@ -18,15 +18,18 @@
           <h1><a href="/">Steven Dao</a></h1>
           <ul class="sections">
             {% for site_page in site.data.nav %}
-              {% if page.url == site_page.url %}
-                <li><a href="{{ site_page.display_url }}" class="selected">{{ site_page.title }}</a></li>
-              {% else %}
-                <li><a href="{{ site_page.display_url }}">{{ site_page.title }}</a></li>
-              {% endif %}
+              <li>
+                {% if page.url == site_page.url %}
+                  <a href="{{ site_page.url }}" class="selected">{{ site_page.title }}
+                {% else %}
+                  <a href="{{ site_page.url }}">{{ site_page.title }}
+                {% endif %}
+                {% if site_page.external %}
+                  <i class="fa fa-external-link-square"></i>
+                {% endif %}
+                </a>
+              </li>
             {% endfor %}
-
-            <!-- Put external links here -->
-            <li><a href="http://blog.sdao.me">Blog <i class="fa fa-external-link"></i></a></li>
           </ul>
           <div class="footer-sidebar">
             {% include footer.html %}

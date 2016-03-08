@@ -1,15 +1,15 @@
-- url: /index.html
-  display_url: /
+- url: /
   title: Home
 
-- url: /games/index.html
-  display_url: /games/
+- url: /games/
   title: Games
 
-- url: /plugins/index.html
-  display_url: /plugins/
+- url: /plugins/
   title: Plugins
 
-- url: /software/index.html
-  display_url: /software/
+- url: /software/
   title: Software
+
+- url: http://blog.sdao.me
+  title: Blog
+  external: true
