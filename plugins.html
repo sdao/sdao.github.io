@@ -10,20 +10,20 @@ title: Plugins
     <p>This is a collection of plugins I&rsquo;ve developed for Maya, 3ds Max, and Houdini. All of them are open-source, and some of them have pre-compiled binaries.</p>
   </header>
 
-  <section id="mannequin">
+  <section id="mayacardboard">
     <article>
       <div class="flextitle">
-        <h2>Mannequin for Maya</h2>
+        <h2>Maya + Google Cardboard</h2>
         <div>
-          <a class="button download" href="https://github.com/sdao/mannequin/releases"><i class="fa fa-download"></i> Download</a><a class="button" href="https://github.com/sdao/mannequin"><i class="fa fa-github"></i> GitHub Repo</a>
+          <a class="button" href="https://github.com/sdao/MayaCardboard"><i class="fa fa-github"></i> GitHub Repo</a>
         </div>
       </div>
       <div class="reactive-container">
-        <img src="/images/mannequin_manipulators.png" alt="Mannequin manipulators in Maya">
+        <img src="/images/cardboard.png" alt="Maya viewport as seen through Google Cardboard">
       </div>
-      <p>Mannequin is a plugin for Maya that allows you to animate an FK (forward kinematics) character rig by interacting directly with the character mesh. Simply hover over the mesh, and Mannequin will detect and highlight parts of the mesh corresponding to different bones in the rig.</p>
-      <p>In the above screenshot, the lower lip has an active translation manipulator. The pointer is hovered over the outer-left eyebrow, which highlights it in the viewport.</p>
-      <p>Built using C++, Python, and MEL. Requires Maya 2015 SP4 or later. Pre-compiled binaries available for Mac OS X and Windows.</p>
+      <p>This is a plugin that allows you to look around in a Maya scene using Google Cardboard on a compatible Android device.</p>
+      <p>By connecting an Android device via a USB cable to your computer, you can stream the contents of a Maya stereoscopic viewport to your phone and display it through a Google Cardboard-compatible app. The camera in your Maya scene will rotate to track the orientation of your phone.</p>
+      <p>Built using the Maya 2016 C++ SDK and tested on both Windows and Linux.</p>
     </article>
   </section>
 
@@ -78,6 +78,23 @@ title: Plugins
       <p>In the video above, the desert scene outside the window is entirely procedurally-generated.</p>
       <p>These plugins&mdash;a 3ds Max modifier and a Houdini SOP&mdash;implement the <a href="http://en.wikipedia.org/wiki/Diamond-square_algorithm">diamond-square algorithm</a>.
       The algorithm can generate terrain of varying roughness, from deserts to mountains.
+    </article>
+  </section>
+
+  <section id="mannequin">
+    <article>
+      <div class="flextitle">
+        <h2>Mannequin for Maya</h2>
+        <div>
+          <a class="button download" href="https://github.com/sdao/mannequin/releases"><i class="fa fa-download"></i> Download</a><a class="button" href="https://github.com/sdao/mannequin"><i class="fa fa-github"></i> GitHub Repo</a>
+        </div>
+      </div>
+      <div class="reactive-container">
+        <img src="/images/mannequin_manipulators.png" alt="Mannequin manipulators in Maya">
+      </div>
+      <p>Mannequin is a plugin for Maya that allows you to animate an FK (forward kinematics) character rig by interacting directly with the character mesh. Simply hover over the mesh, and Mannequin will detect and highlight parts of the mesh corresponding to different bones in the rig.</p>
+      <p>In the above screenshot, the lower lip has an active translation manipulator. The pointer is hovered over the outer-left eyebrow, which highlights it in the viewport.</p>
+      <p>Built using C++, Python, and MEL. Requires Maya 2015 SP4 or later. Pre-compiled binaries available for Mac OS X and Windows.</p>
     </article>
   </section>
 
