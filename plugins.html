@@ -10,34 +10,44 @@ title: Plugins
     <p>This is a collection of plugins I&rsquo;ve developed for Maya, 3ds Max, and Houdini. All of them are open-source, and some of them have pre-compiled binaries.</p>
   </header>
 
-  <section id="mayacardboard">
+  <section id="cardboardtether">
     <article>
       <div class="flextitle">
-        <h2>Maya + Google Cardboard</h2>
-        <div>
-          <a class="button" href="https://github.com/sdao/MayaCardboard"><i class="fa fa-github"></i> GitHub Repo</a>
-        </div>
+        <h2>Cardboard Tethering</h2>
       </div>
       <div class="reactive-container">
         <img src="/images/cardboard.png" alt="Maya viewport as seen through Google Cardboard">
       </div>
-      <p>This is a plugin that allows you to look around in a Maya scene using Google Cardboard on a compatible Android device.</p>
+      <p>These are plugins that allows you to look around in a Maya scene or an Unreal Engine game using Google Cardboard on a compatible Android device.</p>
+      <div class="flextitle">
+        <h3>Maya plugin</h3>
+        <a class="button" href="https://github.com/sdao/MayaCardboard"><i class="fa fa-github"></i> GitHub Repo</a>
+      </div>
       <p>By connecting an Android device via a USB cable to your computer, you can stream the contents of a Maya stereoscopic viewport to your phone and display it through a Google Cardboard-compatible app. The camera in your Maya scene will rotate to track the orientation of your phone.</p>
       <p>Built using the Maya 2016 C++ SDK and tested on both Windows and Linux.</p>
+      <div class="flextitle">
+        <h3>Unreal Engine plugin (in development)</h3>
+        <a class="button" href="https://github.com/sdao/UnrealCardboardTethering"><i class="fa fa-github"></i> GitHub Repo</a>
+      </div>
+      <p>This plugin allows you to use an Android device as a head-mounted display for an Unreal Engine game (or the Unreal Editor) running on your PC. The rendering happens on the PC, but the viewport gets piped to the phone to display in VR.</p>
+      <p>Use with a compatible Cardboard headset. Tested with Unreal 4.11. I'm currently developing the plugin but the basics like video streaming and head tracking already work properly.</p>
     </article>
   </section>
 
   <section id="iwave">
     <article>
       <div class="flextitle">
-        <h2>iWave for 3ds Max</h2>
-        <div>
-          <a class="button download" href="https://github.com/sdao/iWaveOcean/releases"><i class="fa fa-download"></i> Download</a><a class="button" href="https://github.com/sdao/iWaveOcean"><i class="fa fa-github"></i> GitHub Repo</a>
-        </div>
+        <h2>iWave Ocean Simulation</h2>
       </div>
       <div class="reactive-container">
         <div class="video-container">
           <iframe src="https://player.vimeo.com/video/83008229?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="flextitle extra-top-space">
+        <h3>3ds Max modifier</h3>
+        <div>
+          <a class="button download" href="https://github.com/sdao/iWaveOcean/releases"><i class="fa fa-download"></i> Download</a><a class="button" href="https://github.com/sdao/iWaveOcean"><i class="fa fa-github"></i> GitHub Repo</a>
         </div>
       </div>
       <p>
