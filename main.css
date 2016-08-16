@@ -179,7 +179,7 @@ section {
   text-shadow: 1px 1px 1px black;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 60em) {
   body > div {
     flex-direction: column;
   }
