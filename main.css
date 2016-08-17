@@ -189,6 +189,19 @@ section {
   }
   
   nav {
+    margin-top: 0;
     order: 1;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .tile {
+    height: inherit;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tile > img {
+    width: 100%;
   }
 }
