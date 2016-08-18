@@ -1,113 +1,105 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <title>Steven Dao</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <meta charset="utf-8">
-    <meta name="description" content="Steven Dao, San Francisco, CA. Phone (832) 582-0950. Email steven@sdao.me">
-
+    <title>Demo</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"></script>
     <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/main.css" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=400">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+    </script>
   </head>
-
   <body>
-    <header>
-      <div class="gradient-blue">
-        <div class="gradient-red">
+    <main>
+      <header>
+        <article>
+          <h1>Steven Dao</h1>
+          <p>San Francisco, CA &bull; (832) 582-0950 &bull; <a href="mailto:steven@sdao.me">steven@sdao.me</a></p>
+        </article>
+      </header>
+      <div class="parallax-container">
+        <div class="parallax"><img src="images/bodegon.jpg"></div>
+      </div>
+      <section>
+        <p class="desc">Stuff I've worked on:</p>
+        <div class="card-list">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/blackberries.jpg">
+              <span class="card-title">RenderBlog</span>
+            </div>
+            <div class="card-content">
+              <p>Occasional rendering projects where I try to emulate a still-life painting using Maya and RenderMan.</p>
+            </div>
+            <div class="card-action">
+              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://blog.sdao.me/">blog.sdao.me</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="images/vr_cardboard.png">
+              <span class="card-title">Code on GitHub</span>
+            </div>
+            <div class="card-content">
+              <p>Open-source coding projects. Includes Maya, 3ds Max, and Unreal Engine plugins for VR and simulating effects such as water. Other software includes path tracers and a Reyes renderer.</p>
+            </div>
+            <div class="card-action">
+              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="https://github.com/sdao/">github.com/sdao</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="images/confront.png">
+              <span class="card-title">The Thing I Don't Want to Think About</span>
+            </div>
+            <div class="card-content">
+              <p>First-person narrative game produced as a team project for the UT Austin GAMMA Program.</p>
+            </div>
+            <div class="card-action">
+              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://confrontthething.com/">Game Website</a>
+              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://gammaprogram.utexas.edu/">GAMMA Program</a>
+            </div>
+          </div>
+           <div class="card">
+            <div class="card-image">
+              <img src="images/colorless.png">
+              <span class="card-title">Colorless</span>
+            </div>
+            <div class="card-content">
+              <p>Side-scrolling puzzle game produced as a team project for the UT Austin GAMMA Program.</p>
+            </div>
+            <div class="card-action">
+              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="https://colorlessgame.wordpress.com/">Game Website</a>
+              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://gammaprogram.utexas.edu/">GAMMA Program</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="name">
-        <h1>Steven Dao</h1>
-      </div>
-    </header>
-    <div>
-      <nav>
-        <h2>Contact</h2>
-        <ul class="nobullet">
-          <li>San Francisco, CA</li>
-          <li>(832) 582-0950</li>
-          <li><a href="mailto:steven@sdao.me">steven@sdao.me</a></li>
-        </ul>
-        <h2>Connect</h2>
-        <ul class="nobullet">
-          <li><i class="fa fa-github fa-fw"></i> <a href="https://github.com/sdao">GitHub</a></li>
-          <li><i class="fa fa-vimeo-square fa-fw"></i> <a href="https://vimeo.com/stevedao">Vimeo</a></li>
-          <li><i class="fa fa-facebook fa-fw"></i> <a href="https://facebook.com/stevendao">Facebook</a></li>
-          <li><i class="fa fa-linkedin fa-fw"></i> <a href="https://www.linkedin.com/in/shdao/en">LinkedIn</a></li>
-        </ul>
-      </nav>
-      <main>
-        <h2>Renderings</h2>
-        <section>
-          <a href="http://blog.sdao.me/">
-            <div class="tile">
-              <img src="images/blackberries.jpg" alt="Rendering of blackberries from RenderBlog" />
-              <div>RenderBlog</div>
+      </section>
+      <footer class="page-footer light-green">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <p class="grey-text text-lighten-4 center">
+                Connect on
+                <i class="fa fa-vimeo-square fa-fw"></i> <a class="grey-text text-lighten-3" href="https://vimeo.com/stevedao">Vimeo</a>
+                <i class="fa fa-facebook fa-fw"></i> <a class="grey-text text-lighten-3" href="https://facebook.com/stevendao">Facebook</a>
+                <i class="fa fa-linkedin fa-fw"></i> <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/shdao/en">LinkedIn</a>
+              </p>
             </div>
-          </a>
-        </section>
-        <h2>Games</h2>
-        <section>
-          <a href="http://confrontthething.com/">
-            <div class="tile">
-              <img src="images/ttidwtta.png" title="The Thing I Don't Want to Think About" alt="The Thing I Don't Want to Think About logo'" />
-            </div>
-          </a>
-          <a href="https://colorlessgame.wordpress.com/">
-            <div class="tile">
-              <img src="images/colorless_title.png" title="Colorless" alt="Colorless logo" />
-            </div>
-          </a>
-        </section>
-        <h2>Software</h2>
-        <section>
-          <a href="https://github.com/sdao/UnrealCardboardTethering">
-            <div class="tile">
-              <img src="images/vr_cardboard.png" alt="Preview of Cardboard display tethered to Unreal Engine game" />
-              <div>UE4 Cardboard Tethering</div>
-            </div>
-          </a>
-          <a href="https://github.com/sdao/mannequin">
-            <div class="tile">
-              <img src="images/mannequin_manipulators.png" alt="Forward kinematics manipulators in Mannequin plugin" />
-              <div>Mannequin Maya Plugin</div>
-            </div>
-          </a>
-          <a href="https://github.com/sdao/iWaveOcean">
-            <div class="tile">
-              <img src="images/droplet.png" alt="Water droplet simulated by iWave" />
-              <div>iWave 3ds Max Plugin</div>
-            </div>
-          </a>
-          <a href="https://github.com/sdao/DiamondSquare">
-            <div class="tile">
-              <img src="images/terrain.jpg" alt="Scene with diamond-square terrain" />
-              <div>Terrain 3ds Max Plugin</div>
-            </div>
-          </a>
-          <a href="https://github.com/sdao/xray">
-            <div class="tile">
-              <img src="images/gpu_spheres_4300spp_5min.png" alt="Path-tracer rendering of spheres" />
-              <div>Path Tracer (OptiX)</div>
-            </div>
-          </a>
-          <a href="https://github.com/sdao/path-tracer">
-            <div class="tile">
-              <img src="images/pathtracer_dragon_800iters_30min.png" alt="Path-tracer rendering of a Cornell box" />
-              <div>Path Tracer (Embree)</div>
-            </div>
-          </a>
-          <a href="https://github.com/sdao/hugo-reyes">
-            <div class="tile">
-              <img src="images/reyes.png" alt="REYES renderings with displacement" />
-              <div>Reyes Renderer</div>
-            </div>
-          </a>
-        </section>
-      </main>
-    </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container center">
+            (832) 582-0950 &bull; <a class="grey-text text-lighten-3" href="mailto:steven@sdao.me">steven@sdao.me</a>
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
