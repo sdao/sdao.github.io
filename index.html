@@ -5,19 +5,49 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <meta charset="utf-8">
     <meta name="description" content="Steven Dao, San Francisco, CA. Phone (832) 582-0950. Email steven at sdao dot me.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.parallax').parallax();
-      });
-    </script>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/app-layout/app-box/app-box.html">
+    <link rel="import" href="bower_components/app-layout/app-scroll-effects/effects/parallax-background.html">
+
+    <style is="custom-style">
+      app-box {
+        --app-box-background-front-layer: {
+          position: relative;
+          display: flex;
+          justify-content: center;
+        };
+      }
+      
+      app-box {
+        height: 500px;
+      }
+
+      app-box > div {
+        box-shadow: inset 0 -8px 8px -8px rgba(0, 0, 0, 0.5), inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+      }
+
+      app-box img {
+        flex: none;
+        position: relative;
+        top: -360px;
+      }
+
+      paper-card {
+        --paper-card-header-color: #fff;
+      }
+
+      paper-button {
+        color: var(--paper-light-green-700);
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -27,82 +57,67 @@
           <p>San Francisco, CA &bull; (832) 582-0950 &bull; <a href="mailto:steven@sdao.me">steven@sdao.me</a></p>
         </article>
       </header>
-      <div class="parallax-container">
-        <div class="parallax"><img src="images/bodegon.jpg" alt="Rendering of still life with pottery jars"></div>
-      </div>
+      <app-box effects="parallax-background">
+        <img background src="images/bodegon.jpg" style="">
+      </app-box>
       <section>
         <h2>Stuff I've worked on:</h2>
         <div class="card-list">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/blackberries.jpg" alt="Rendering of blackberries in a bowl">
-              <span class="card-title">RenderBlog</span>
-            </div>
+          <paper-card heading="RenderBlog" image="images/blackberries.jpg" alt="Rendering of blackberries in a bowl">
             <div class="card-content">
-              <p>Occasional rendering projects where I try to emulate a still-life painting using Maya and RenderMan.</p>
+              Occasional rendering projects where I try to emulate a still-life painting using Maya and RenderMan.
             </div>
-            <div class="card-action">
-              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://blog.sdao.me/">blog.sdao.me</a>
+            <div class="card-actions">
+              <a tabindex="-1" href="http://blog.sdao.me/">
+                <paper-button>blog.sdao.me</paper-button>
+              </a>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="images/vr_cardboard.jpg" alt="Screenshot from a Google Cardboard session with the Unreal Engine VR plugin">
-              <span class="card-title">Code on GitHub</span>
-            </div>
+          </paper-card>
+          <paper-card heading="Code on GitHub" image="images/vr_cardboard.jpg" alt="Screenshot from a Google Cardboard session with the Unreal Engine VR plugin">
             <div class="card-content">
-              <p>Open-source coding projects. Includes Maya, 3ds Max, and Unreal Engine plugins for VR and simulating effects such as water. Other software includes path tracers and a Reyes renderer.</p>
+              Open-source coding projects. Includes Maya, 3ds Max, and Unreal Engine plugins for VR and simulating effects such as water. Other software includes path tracers and a Reyes renderer.
             </div>
-            <div class="card-action">
-              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="https://github.com/sdao/">github.com/sdao</a>
+            <div class="card-actions">
+              <a tabindex="-1" href="https://github.com/sdao/">
+                <paper-button>github.com/sdao</paper-button>
+              </a>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="images/confront.jpg" alt="Scene from the game The Thing I Don't Want to Think About">
-              <span class="card-title">The Thing I Don't Want to Think About</span>
-            </div>
+          </paper-card>
+          <paper-card heading="The Thing I Don't Want to Think About" image="images/confront.jpg" alt="Scene from the game The Thing I Don't Want to Think About">
             <div class="card-content">
-              <p>First-person narrative game produced as a team project for the UT Austin GAMMA Program.</p>
+              First-person narrative game produced as a team project for the UT Austin GAMMA Program.
             </div>
-            <div class="card-action">
-              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://confrontthething.com/">Game Website</a>
-              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://gammaprogram.utexas.edu/">GAMMA Program</a>
+            <div class="card-actions">
+              <a tabindex="-1" href="http://confrontthething.com/">
+                <paper-button>Game Website</paper-button>
+              </a>
+              <a tabindex="-1" href="http://gammaprogram.utexas.edu/">
+                <paper-button>GAMMA Program</paper-button>
+              </a>
             </div>
-          </div>
-           <div class="card">
-            <div class="card-image">
-              <img src="images/colorless.jpg" alt="Scene from the game Colorless">
-              <span class="card-title">Colorless</span>
-            </div>
+          </paper-card>
+          <paper-card heading="Colorless"" image="images/colorless.jpg" alt="Scene from the game Colorless">
             <div class="card-content">
-              <p>Side-scrolling puzzle game produced as a team project for the UT Austin GAMMA Program.</p>
+              Side-scrolling puzzle game produced as a team project for the UT Austin GAMMA Program.
             </div>
-            <div class="card-action">
-              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="https://colorlessgame.wordpress.com/">Game Website</a>
-              <a class="light-green-text text-darken-1 waves-effect waves-gray btn-flat" href="http://gammaprogram.utexas.edu/">GAMMA Program</a>
+            <div class="card-actions">
+              <a tabindex="-1" href="https://colorlessgame.wordpress.com/">
+                <paper-button>Game Website</paper-button>
+              </a>
+              <a tabindex="-1" href="http://gammaprogram.utexas.edu/">
+                <paper-button>GAMMA Program</paper-button>
+              </a>
             </div>
-          </div>
+          </paper-card>
         </div>
       </section>
-      <footer class="page-footer light-green">
-        <div class="container">
-          <div class="row">
-            <div class="col s12">
-              <p class="grey-text text-lighten-4 center">
-                Connect on
-                <i class="fa fa-vimeo-square fa-fw"></i> <a class="grey-text text-lighten-3" href="https://vimeo.com/stevedao">Vimeo</a>
-                <i class="fa fa-facebook fa-fw"></i> <a class="grey-text text-lighten-3" href="https://facebook.com/stevendao">Facebook</a>
-                <i class="fa fa-linkedin fa-fw"></i> <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/shdao/en">LinkedIn</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container center">
-            (832) 582-0950 &bull; <a class="grey-text text-lighten-3" href="mailto:steven@sdao.me">steven@sdao.me</a>
-          </div>
-        </div>
+      <footer>
+        <p>
+          Connect on
+          <span class="nowrap"><i class="fa fa-vimeo-square fa-fw"></i> <a href="https://vimeo.com/stevedao">Vimeo</a></span>
+          <span class="nowrap"><i class="fa fa-facebook fa-fw"></i> <a href="https://facebook.com/stevendao">Facebook</a></span>
+          <span class="nowrap"><i class="fa fa-linkedin fa-fw"></i> <a href="https://www.linkedin.com/in/shdao/en">LinkedIn</a></span>
+        </p>
       </footer>
     </main>
   </body>
