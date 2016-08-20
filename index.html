@@ -8,39 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
-    <link rel="import" href="bower_components/app-layout/app-box/app-box.html">
-    <link rel="import" href="bower_components/app-layout/app-scroll-effects/effects/parallax-background.html">
-    
+
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
 
     <style is="custom-style">
-      app-box {
-        --app-box-background-front-layer: {
-          position: relative;
-          display: flex;
-          justify-content: center;
-        };
-      }
-      
-      app-box {
-        height: 500px;
-      }
-
-      app-box > div {
-        box-shadow: inset 0 -8px 8px -8px rgba(0, 0, 0, 0.5), inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
-      }
-
-      app-box img {
-        flex: none;
-        position: relative;
-        top: -360px;
-      }
-
       paper-card {
         --paper-card-header-color: #fff;
       }
@@ -51,16 +26,18 @@
     </style>
   </head>
   <body>
-    <main>
+    <main class="parallax ">
       <header>
         <article>
           <h1>Steven Dao</h1>
           <p>San Francisco, CA &bull; (832) 582-0950 &bull; <a href="mailto:steven@sdao.me">steven@sdao.me</a></p>
         </article>
       </header>
-      <app-box effects="parallax-background">
-        <img background src="images/bodegon.jpg" style="">
-      </app-box>
+      <div class="parallax-group">
+        <div class="parallax-back">
+          <img src="images/bodegon.jpg" alt="Rendering of pottery jars in a bodegon scene">
+        </div>
+      </div>
       <section>
         <h2>Stuff I've worked on:</h2>
         <div class="card-list">

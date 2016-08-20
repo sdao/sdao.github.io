@@ -1,11 +1,14 @@
 body {
-  background-color: #eee;
   min-height: 0;
   max-width: 2000px;
   font-family: "Roboto Slab", Georgia, sans-serif;
   font-weight: 400;
   font-size: 1.2em;
   margin: 0 auto;
+}
+
+body, header, section, footer {
+  background-color: #eee;
 }
 
 h1 {
@@ -28,14 +31,15 @@ h2 {
 }
 
 p {
-  margin: 10px;
-  padding: 0;
+  margin: 0;
+  padding: 10px;
 }
 
 article {
   text-align: center;
   max-width: 500px;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 section {
@@ -63,7 +67,7 @@ header a:hover, footer a:hover {
 
 footer {
   text-align: center;
-  margin: 0 2em 2em 2em;
+  padding: 0 2em 2em 2em;
 }
 
 .card-list {
@@ -93,4 +97,35 @@ footer {
     max-width: inherit;
     width: 100%;
   }
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-group {
+  position: relative;
+  transform-style: preserve-3d;
+  height: 500px;
+  z-index: -1000;
+}
+
+.parallax-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-back > * {
+  flex: none;
 }
