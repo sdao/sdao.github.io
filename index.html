@@ -1,102 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Steven Dao</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <meta charset="utf-8">
-    <meta name="description" content="Steven Dao, San Francisco, CA. Phone (832) 582-0950. Email steven at sdao dot me.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="import" href="bower_components/paper-card/paper-card.html">
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
-
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
-
-    <style is="custom-style">
-      paper-card {
-        --paper-card-header-color: #fff;
-      }
-
-      paper-button {
-        color: var(--paper-light-green-700);
-      }
-    </style>
-  </head>
-  <body>
-    <main class="parallax ">
-      <header>
-        <article>
-          <h1>Steven Dao</h1>
-          <p>San Francisco, CA &bull; (832) 582-0950 &bull; <a href="mailto:steven@sdao.me">steven@sdao.me</a></p>
-        </article>
-      </header>
-      <div class="parallax-group">
-        <div class="parallax-back">
-          <img src="images/bodegon.jpg" alt="Rendering of pottery jars in a bodegon scene">
+<html>
+    <head>
+        <title>Steven Dao</title>
+        <link rel="icon" type="image/png" href="/images/favicon.png">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> 
+        <link href="main.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="description" content="Steven Dao, San Francisco, CA. Phone (832) 582-0950. Email steven at sdao dot me.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src="three.js"></script>
+        <script src="anim.js"></script>
+        <div class="infobox">
+            <section>
+                <h1>Steven Dao</h1>
+                San Francisco, CA&nbsp;&bull;&nbsp;(832) 582-0950&nbsp;&bull;&nbsp;steven@sdao.me
+            </section>
+            <section>
+                <p>I currently work on tools at <a href="https://www.pixar.com/">Pixar</a>.</p>
+                <p>I studied at <a href="https://www.utexas.edu/">The University of Texas at Austin</a>.</p>
+                <p>I enjoy biking around SF, playing the NYT crossword, and grabbing bubble tea.</p>
+                <p><a href="https://blog.sdao.me">Blog</a>&nbsp;&bull;&nbsp;<a href="https://github.com/sdao/">GitHub</a>&nbsp;&bull;&nbsp<a href="https://www.linkedin.com/in/shdao/en">LinkedIn</a></p>
+            </section>
         </div>
-      </div>
-      <section>
-        <h2>Stuff I've worked on:</h2>
-        <div class="card-list">
-          <paper-card heading="RenderBlog" image="images/blackberries.jpg" alt="Rendering of blackberries in a bowl">
-            <div class="card-content">
-              Occasional rendering projects where I try to emulate a still-life painting using Maya and RenderMan.
-            </div>
-            <div class="card-actions">
-              <a tabindex="-1" href="http://blog.sdao.me/">
-                <paper-button>blog.sdao.me</paper-button>
-              </a>
-            </div>
-          </paper-card>
-          <paper-card heading="Code on GitHub" image="images/vr_cardboard.jpg" alt="Screenshot from a Google Cardboard session with the Unreal Engine VR plugin">
-            <div class="card-content">
-              Open-source coding projects. Includes Maya, 3ds Max, and Unreal Engine plugins for VR and simulating effects such as water. Other software includes path tracers and a Reyes renderer.
-            </div>
-            <div class="card-actions">
-              <a tabindex="-1" href="https://github.com/sdao/">
-                <paper-button>github.com/sdao</paper-button>
-              </a>
-            </div>
-          </paper-card>
-          <paper-card heading="The Thing I Don't Want to Think About" image="images/confront.jpg" alt="Scene from the game The Thing I Don't Want to Think About">
-            <div class="card-content">
-              First-person narrative game produced as a team project for the UT Austin GAMMA Program.
-            </div>
-            <div class="card-actions">
-              <a tabindex="-1" href="http://confrontthething.com/">
-                <paper-button>Game Website</paper-button>
-              </a>
-              <a tabindex="-1" href="http://gammaprogram.utexas.edu/">
-                <paper-button>GAMMA Program</paper-button>
-              </a>
-            </div>
-          </paper-card>
-          <paper-card heading="Colorless" image="images/colorless.jpg" alt="Scene from the game Colorless">
-            <div class="card-content">
-              Side-scrolling puzzle game produced as a team project for the UT Austin GAMMA Program.
-            </div>
-            <div class="card-actions">
-              <a tabindex="-1" href="https://colorlessgame.wordpress.com/">
-                <paper-button>Game Website</paper-button>
-              </a>
-              <a tabindex="-1" href="http://gammaprogram.utexas.edu/">
-                <paper-button>GAMMA Program</paper-button>
-              </a>
-            </div>
-          </paper-card>
-        </div>
-      </section>
-      <footer>
-        <p>
-          Connect on
-          <span class="nowrap"><i class="fa fa-vimeo-square fa-fw"></i> <a href="https://vimeo.com/stevedao">Vimeo</a></span>
-          <span class="nowrap"><i class="fa fa-facebook fa-fw"></i> <a href="https://facebook.com/stevendao">Facebook</a></span>
-          <span class="nowrap"><i class="fa fa-linkedin fa-fw"></i> <a href="https://www.linkedin.com/in/shdao/en">LinkedIn</a></span>
-        </p>
-      </footer>
-    </main>
-  </body>
+    </body>
 </html>
