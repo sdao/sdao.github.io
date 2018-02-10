@@ -5,6 +5,17 @@ body {
   overflow: hidden;
 }
 
+::-moz-selection {
+  text-shadow: none;
+  background: #709020;
+  color: #fff;
+}
+::selection {
+  text-shadow: none;
+  background: #99cc33;
+  color: #fff;
+}
+
 a {
   color: #99cc33;
   text-decoration: none;
