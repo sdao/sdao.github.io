@@ -47,7 +47,6 @@ window.onload = function() {
     function onWindowResize() {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.fov = Math.min((window.innerHeight / window.innerWidth) * 220.0, 70.0);
-        window.console.info("blah" + camera.fov)
         camera.updateProjectionMatrix();
 
         renderer.setSize( window.innerWidth, window.innerHeight );
