@@ -33,9 +33,16 @@ window.onload = function() {
     }
 
     var animate = function (time) {
-        mesh.rotation.x = time / 12000.0;
-        mesh.rotation.y = time / 8000.0;
-        mesh.rotation.z = time / 24000.0;
+        var t = time + 14000.0;
+        mesh.rotation.x = t / 12000.0;
+        mesh.rotation.y = t / 8000.0;
+        mesh.rotation.z = t / 24000.0;
+        light.color.r = 0.5 + 0.1 * Math.sin(t / 4000.0);
+        light.color.g = 0.5 + 0.2 * Math.cos(t / 6000.0);
+        light.color.b = 0.5 + 0.3 * Math.cos(t / 8000.0);
+        light.groundColor.r = 0.5 + 0.3 * Math.cos(t / 12000.0);
+        light.groundColor.r = 0.5 + 0.5 * Math.cos(t / 8000.0);
+        light.groundColor.r = 0.5 + 0.4 * Math.cos(t / 6000.0);
 
         renderer.render(scene, camera);
 
