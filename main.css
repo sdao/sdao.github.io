@@ -6,24 +6,30 @@ body {
 }
 
 ::-moz-selection {
-  background: #49796B;
+  background: #222;
   color: #fff;
 }
 ::selection {
-  background: #49796B;
+  background: #222;
   color: #fff;
 }
 
 a {
-  color: #49796B;
+  color: #444;
   text-decoration: none;
   display: inline-block;
   position: relative;
-  transition: color 0.25s;
+  border-bottom: 2px solid #666;
+  transition: color 0.25s, background-color 0.25s;
 }
 
 a:hover {
-  color: #ccc;
+  color: #666;
+  background-color: #eee;
+}
+
+strong {
+  font-weight: 500;
 }
 
 .infobox {
@@ -31,19 +37,18 @@ a:hover {
   top: 10px;
   left: 10px;
   margin-right: 10px;
-  color: black;
+  color: #222;
   background-color: white;
-  opacity: 0.6;
 }
 
 .infobox h1 {
-  font-weight: normal;
+  font-weight: 900;
   margin: 0;
 }
 
 .infobox p {
   margin: 0.2em 0;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .infobox section {

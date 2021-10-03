@@ -1,22 +1,12 @@
 window.onload = function() {
     var scene = new THREE.Scene();
-    scene.background = new THREE.Color( 0xf6f6f6 );
+    scene.background = new THREE.Color( 0xf0f0f0 );
 
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
 
     var renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.getElementById("anim").appendChild(renderer.domElement);
-
-    var geometry = new THREE.SphereGeometry(5, 10, 10);
-    var material = new THREE.MeshStandardMaterial({
-        color: 0xffffff,
-        flatShading: true,
-        metalness: 0.1,
-        side: THREE.BackSide
-    });
-    var mesh = new THREE.Mesh(geometry, material);
-    scene.add( mesh );
 
     var light = new THREE.HemisphereLight(0x3366cc, 0x99ffdd, 1 );
     scene.add( light );
@@ -32,17 +22,71 @@ window.onload = function() {
         renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
+    var lastAdd = 0.0;
+    let geoms = [];
     var animate = function (time) {
-        var t = time - 8000.0;
-        mesh.rotation.x = t / 12000.0;
-        mesh.rotation.y = t / 8000.0;
-        mesh.rotation.z = t / 24000.0;
-        light.color.r = 0.3 + 0.3 * Math.sin(t / 4000.0);
-        light.color.g = 0.5 + 0.3 * Math.cos(t / 6000.0);
-        light.color.b = 0.7 + 0.3 * Math.cos(t / 8000.0);
-        light.groundColor.r = 0.3 + 0.3 * Math.cos(t / 12000.0);
-        light.groundColor.g = 0.7 + 0.3 * Math.cos(t / 8000.0);
-        light.groundColor.b = 0.5 + 0.3 * Math.cos(t / 6000.0);
+        if (time - lastAdd > 3000.0)
+        {
+            // Cull to maintain 10 geometries total.
+            if (geoms.length > 10)
+            {
+                geoms.shift();
+            }
+
+            // Add a new geometry every 3 seconds.
+            {
+                var newGeom = null;
+                const selectNum = Math.random();
+                if (selectNum < 0.25)
+                {
+                    newGeom = new THREE.IcosahedronGeometry(1, 0);
+                }
+                else if (selectNum < 0.5)
+                {
+                    newGeom = new THREE.DodecahedronGeometry(1, 0);
+                }
+                else if (selectNum < 0.75)
+                {
+                    newGeom = new THREE.TetrahedronGeometry(1, 0);
+                }
+                else
+                {
+                    newGeom = new THREE.BoxGeometry(1, 1, 1);
+                }
+        
+                var geo = new THREE.EdgesGeometry(newGeom);
+                var mat = new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 2 });
+                var wireframe = new THREE.LineSegments(geo, mat);
+                wireframe.position.x = 6.0 * Math.random() - 3.0;
+                wireframe.position.y = 6.0 * Math.random() - 3.0;
+                scene.add(wireframe);
+        
+                var rotVector = new THREE.Vector3(
+                    2.0 * Math.random() - 1.0,
+                    2.0 * Math.random() - 1.0,
+                    2.0 * Math.random() - 1.0);
+
+                geoms.push([wireframe, mat, rotVector, time]);
+            }
+
+            lastAdd = time;
+        }
+
+        for (const [wireframe, mat, rotVector, addTime] of geoms)
+        {
+            const t = (time - addTime);
+            wireframe.rotation.x = rotVector.x * t / 2000.0;
+            wireframe.rotation.y = rotVector.y * t / 2000.0;
+            wireframe.rotation.z = rotVector.z * t / 2000.0;
+            wireframe.scale.x = t / 1000.0;
+            wireframe.scale.y = t / 1000.0;
+            wireframe.scale.z = t / 1000.0;
+
+            const s = Math.pow((t - 2000.0) / 4000.0, 2);
+            mat.color.r = s;
+            mat.color.g = s;
+            mat.color.b = s;
+        }
 
         renderer.render(scene, camera);
 
