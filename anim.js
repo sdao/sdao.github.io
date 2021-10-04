@@ -28,9 +28,11 @@ window.onload = function() {
         if (time - lastAdd > 3000.0)
         {
             // Cull to maintain 10 geometries total.
-            if (geoms.length > 10)
+            if (geoms.length >= 10)
             {
-                geoms.shift();
+                const removed = geoms.shift();
+                scene.remove(removed);
+                
             }
 
             // Add a new geometry every 3 seconds.
