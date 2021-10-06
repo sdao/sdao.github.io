@@ -19,7 +19,7 @@ a {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  border-bottom: 2px solid #666;
+  border-bottom: 0.15em solid #666;
   transition: color 0.25s, background-color 0.25s;
 }
 
@@ -34,9 +34,9 @@ strong {
 
 .infobox {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  margin-right: 10px;
+  top: 1em;
+  left: 1em;
+  margin-right: 1em;
   color: #222;
   background-color: white;
 }
@@ -48,7 +48,7 @@ strong {
 
 .infobox p {
   margin: 0.2em 0;
-  max-width: 760px;
+  max-width: 50em;
 }
 
 .infobox section {

@@ -24,15 +24,20 @@ window.onload = function() {
 
     var lastAdd = 0.0;
     let geoms = [];
+    var counter = 0;
+    const ICOSAHEDRON = new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(1, 0));
+    const DODECAHEDRON = new THREE.EdgesGeometry(new THREE.DodecahedronGeometry(1, 0));
+    const TETRAHEDRON = new THREE.EdgesGeometry(new THREE.TetrahedronGeometry(1, 0));
+    const BOX = new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1));
     var animate = function (time) {
         if (time - lastAdd > 3000.0)
         {
-            // Cull to maintain 10 geometries total.
-            if (geoms.length >= 10)
+            // Cull to maintain 12 geometries total.
+            if (geoms.length >= 12)
             {
-                const removed = geoms.shift();
-                scene.remove(removed);
-                
+                const [wireframe, mat, rotVector, addTime] = geoms.shift();
+                mat.dispose();
+                scene.remove(wireframe);
             }
 
             // Add a new geometry every 3 seconds.
@@ -41,24 +46,24 @@ window.onload = function() {
                 const selectNum = Math.random();
                 if (selectNum < 0.25)
                 {
-                    newGeom = new THREE.IcosahedronGeometry(1, 0);
+                    newGeom = ICOSAHEDRON;
                 }
                 else if (selectNum < 0.5)
                 {
-                    newGeom = new THREE.DodecahedronGeometry(1, 0);
+                    newGeom = DODECAHEDRON;
                 }
                 else if (selectNum < 0.75)
                 {
-                    newGeom = new THREE.TetrahedronGeometry(1, 0);
+                    newGeom = TETRAHEDRON;
                 }
                 else
                 {
-                    newGeom = new THREE.BoxGeometry(1, 1, 1);
+                    newGeom = BOX;
                 }
         
-                var geo = new THREE.EdgesGeometry(newGeom);
                 var mat = new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 2 });
-                var wireframe = new THREE.LineSegments(geo, mat);
+                var wireframe = new THREE.LineSegments(newGeom, mat);
+                wireframe.name = "geom_" + counter++;
                 wireframe.position.x = 6.0 * Math.random() - 3.0;
                 wireframe.position.y = 6.0 * Math.random() - 3.0;
                 scene.add(wireframe);
