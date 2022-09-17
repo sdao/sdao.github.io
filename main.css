@@ -7,12 +7,13 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: rgb(110, 164, 100);
 }
 
 #flex {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr fit-content(50em) 1fr;
+  grid-template-rows: 1fr fit-content(10em) 1fr;
+  align-items: stretch;
   justify-content: center;
   min-height: 100vh;
 }
@@ -31,13 +32,13 @@ a {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  border-bottom: 0.15em solid #666;
+  border-bottom: 0.15em solid #447539;
   margin-bottom: 0.15em;
   transition: color 0.25s, border-bottom 0.25s, margin-bottom 0.25s;
 }
 
 a:hover {
-  border-bottom: 0.3em solid #888;
+  border-bottom: 0.3em solid #5B9C4C;
   margin-bottom: 0em;
 }
 
@@ -47,24 +48,48 @@ strong {
 }
 
 .infobox {
-  margin: 1em;
+  padding: 1em;
   color: #222;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 0.5em solid rgb(72, 116, 64);
+  background-color: #f0f0f0;
 }
 
 .infobox h1 {
   font-weight: 900;
   margin: 0;
+  color: #447539;
 }
 
 .infobox p {
   margin: 0.2em 0;
-  max-width: 50em;
 }
 
 .infobox section {
   margin: 1em;
   position: relative;
   z-index: 1;
+}
+
+.green1
+{
+  background-color: #305228;
+}
+
+.green2
+{
+  background-color: #80DB6B;
+}
+
+.green3
+{
+  background-color: #538F46;
+}
+
+.green4
+{
+  background-color: #5B9C4C;
+}
+
+.green5
+{
+  background-color: #447539;
 }
