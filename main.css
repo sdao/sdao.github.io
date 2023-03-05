@@ -11,9 +11,7 @@ body {
 
 #flex {
   display: grid;
-  grid-template-columns: 1fr fit-content(50em) 1fr;
-  grid-template-rows: 1fr fit-content(10em) 1fr;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
@@ -50,13 +48,13 @@ strong {
 .infobox {
   padding: 1em;
   color: #222;
-  background-color: #f0f0f0;
+  background-color: #f3f3f3;
 }
 
 .infobox h1 {
   font-weight: 900;
   margin: 0;
-  color: #447539;
+  color: #333;
 }
 
 .infobox p {
@@ -69,27 +67,74 @@ strong {
   z-index: 1;
 }
 
-.green1
+.inner
 {
-  background-color: #305228;
+  position: relative;
 }
 
-.green2
+.border
 {
-  background-color: #80DB6B;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-.green3
-{
-  background-color: #538F46;
+@keyframes border1_keys {
+  from {
+    transform: scale(1.02) rotate(1deg) translate(1em, 1em);
+    outline: 0.2em solid #538F46;
+  }
+
+  to {
+    transform: scale(1.04) rotate(2deg) translate(0.4em, 0.7em);
+    outline: 0.2em solid #538F46;
+  }
 }
 
-.green4
+#border1
 {
-  background-color: #5B9C4C;
+  animation-duration: 6s;
+  animation-name: border1_keys;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-.green5
+@keyframes border2_keys {
+  from {
+    transform: scale(1.03) rotate(0deg) translate(-0.2em, -1em);
+    outline: 0.2em solid #447539;
+  }
+
+  to {
+    transform: scale(1.01) rotate(-1deg) translate(-0.2em, -1.1em);
+    outline: 0.2em solid #305228;
+  }
+}
+
+#border2
 {
-  background-color: #447539;
+  animation-duration: 5s;
+  animation-name: border2_keys;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes border3_keys {
+  from {
+    transform: scale(1.01) rotate(-2deg) translate(-0.8em, -0.1em);
+    outline: 0.2em solid #80DB6B;
+  }
+
+  to {
+    transform: scale(1.03) rotate(-3deg) translate(-0.6em, -0.2em);
+    outline: 0.2em solid #5B9C4C;
+  }
+}
+
+#border3
+{
+  animation-duration: 4s;
+  animation-name: border3_keys;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
