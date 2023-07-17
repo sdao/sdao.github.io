@@ -2,11 +2,31 @@ html {
   min-height: 100vh;
 }
 
+@keyframes body_bg_keys {
+	0% {
+		background-position: 0% 50%;
+	}
+	33% {
+		background-position: 100% 50%;
+	}
+	67% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 body {
   font-family: 'Roboto Slab', serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background: radial-gradient(ellipse at top, #41b40c, transparent),
+              radial-gradient(ellipse at bottom, #0770e8, transparent),
+              #447539;
+  background-size: 400% 400%;
+	animation: body_bg_keys 15s ease infinite;
 }
 
 #flex {
@@ -47,9 +67,8 @@ strong {
 }
 
 .infobox {
-  padding: 1em;
+  padding: 0;
   color: #222;
-  background-color: #f3f3f3;
 }
 
 .infobox h1 {
@@ -78,17 +97,18 @@ strong {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-color: white;
+  opacity: 50%;
+  box-shadow: 0 0 2em 3em white;
 }
 
 @keyframes border1_keys {
   from {
-    transform: scale(1.02) rotate(1deg) translate(1em, 1em);
-    outline: 0.2em solid #538F46;
+    transform: scale(0.97) rotate(-2deg) translate(1em, 1em);
   }
 
   to {
-    transform: scale(1.04) rotate(2deg) translate(0.4em, 0.7em);
-    outline: 0.2em solid #538F46;
+    transform: scale(0.99) rotate(4deg) translate(0.4em, 0.7em);
   }
 }
 
@@ -102,13 +122,11 @@ strong {
 
 @keyframes border2_keys {
   from {
-    transform: scale(1.03) rotate(0deg) translate(-0.2em, -1em);
-    outline: 0.2em solid #447539;
+    transform: scale(0.99) rotate(1deg) translate(-0.2em, -1em);
   }
 
   to {
-    transform: scale(1.01) rotate(-1deg) translate(-0.2em, -1.1em);
-    outline: 0.2em solid #305228;
+    transform: scale(0.96) rotate(-3deg) translate(-0.2em, -1.1em);
   }
 }
 
@@ -122,13 +140,11 @@ strong {
 
 @keyframes border3_keys {
   from {
-    transform: scale(1.01) rotate(-2deg) translate(-0.8em, -0.1em);
-    outline: 0.2em solid #80DB6B;
+    transform: scale(0.98) rotate(3deg) translate(-0.8em, -0.1em);
   }
 
   to {
-    transform: scale(1.03) rotate(-3deg) translate(-0.6em, -0.2em);
-    outline: 0.2em solid #5B9C4C;
+    transform: scale(0.95) rotate(-5deg) translate(-0.6em, -0.2em);
   }
 }
 
