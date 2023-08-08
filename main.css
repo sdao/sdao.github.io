@@ -1,3 +1,7 @@
+html {
+  min-height: 100vh;
+}
+
 body {
   font-family: 'Courier Prime', 'Courier New', Courier, monospace;
   letter-spacing: -0.02em;
