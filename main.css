@@ -1,40 +1,9 @@
-html {
-  min-height: 100vh;
-}
-
-@keyframes body_bg_keys {
-	0% {
-		background-position: 0% 50%;
-	}
-	33% {
-		background-position: 100% 50%;
-	}
-	67% {
-		background-position: 100% 100%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+  letter-spacing: -0.02em;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background: radial-gradient(ellipse at top, #41b40c, transparent),
-              radial-gradient(ellipse at bottom, #0770e8, transparent),
-              #447539;
-  background-size: 400% 400%;
-	animation: body_bg_keys 15s ease infinite;
-}
-
-#flex {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  overflow: clip;
+  background: #efefef;
 }
 
 ::-moz-selection {
@@ -51,18 +20,18 @@ a {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  border-bottom: 0.15em solid #447539;
+  border-bottom: 0.15em solid #666;
   margin-bottom: 0.15em;
   transition: color 0.25s, border-bottom 0.25s, margin-bottom 0.25s;
 }
 
 a:hover {
-  border-bottom: 0.3em solid #5B9C4C;
+  border-bottom: 0.3em solid #666;
   margin-bottom: 0em;
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 700;
   color: #333;
 }
 
@@ -72,7 +41,7 @@ strong {
 }
 
 .infobox h1 {
-  font-weight: 900;
+  font-weight: 700;
   margin: 0;
   color: #333;
 }
@@ -84,74 +53,4 @@ strong {
 .infobox section {
   margin: 1em;
   position: relative;
-  z-index: 1;
-}
-
-.inner
-{
-  position: relative;
-}
-
-.border
-{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 50%;
-  box-shadow: 0 0 2em 3em white;
-}
-
-@keyframes border1_keys {
-  from {
-    transform: scale(0.97) rotate(-2deg) translate(1em, 1em);
-  }
-
-  to {
-    transform: scale(0.99) rotate(4deg) translate(0.4em, 0.7em);
-  }
-}
-
-#border1
-{
-  animation-duration: 6s;
-  animation-name: border1_keys;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes border2_keys {
-  from {
-    transform: scale(0.99) rotate(1deg) translate(-0.2em, -1em);
-  }
-
-  to {
-    transform: scale(0.96) rotate(-3deg) translate(-0.2em, -1.1em);
-  }
-}
-
-#border2
-{
-  animation-duration: 5s;
-  animation-name: border2_keys;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes border3_keys {
-  from {
-    transform: scale(0.98) rotate(3deg) translate(-0.8em, -0.1em);
-  }
-
-  to {
-    transform: scale(0.95) rotate(-5deg) translate(-0.6em, -0.2em);
-  }
-}
-
-#border3
-{
-  animation-duration: 4s;
-  animation-name: border3_keys;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
