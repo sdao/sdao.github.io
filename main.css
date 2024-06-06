@@ -46,7 +46,20 @@ strong {
   background: #fff;
   display: inline-block;
   border: 0.2em solid #333;
-  box-shadow: 0.5em 0.5em 0 #666;
+  position: relative;
+}
+
+.infobox::before {
+  content: '';
+  position: absolute;
+  top: 0.3em;
+  bottom: -0.7em;
+  left: 0.3em;
+  right: -0.7em;
+  z-index: -1;
+  background-image: radial-gradient(rgb(80, 80, 80) 50%, transparent 60%);
+  background-position: bottom right;
+  background-size: 3px 3px;
 }
 
 .infobox h1 {
